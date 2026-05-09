@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chandra Daily Mart - Orders</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#006e24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f6",
+                        "surface-container-highest": "#e2e2e5",
+                        "on-tertiary-fixed-variant": "#5a00c6",
+                        "surface": "#f9f9fc",
+                        "primary": "#006e24",
+                        "surface-bright": "#f9f9fc",
+                        "on-surface-variant": "#3e4a3c",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "on-primary-container": "#003f11",
+                        "on-primary-fixed": "#002106",
+                        "background": "#f9f9fc",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eeeef0",
+                        "on-surface": "#1a1c1e",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#440099",
+                        "tertiary-container": "#af88ff",
+                        "primary-container": "#38b44e",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#82fc8c",
+                        "inverse-primary": "#66df73",
+                        "inverse-surface": "#2f3133",
+                        "primary-fixed-dim": "#66df73",
+                        "outline-variant": "#bdcab8",
+                        "tertiary-fixed-dim": "#d2bbff",
+                        "on-secondary-fixed-variant": "#753400",
+                        "tertiary": "#732ee4",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#005319",
+                        "on-background": "#1a1c1e",
+                        "surface-container-high": "#e8e8ea",
+                        "on-tertiary-fixed": "#25005a",
+                        "on-secondary-fixed": "#321200",
+                        "inverse-on-surface": "#f0f0f3",
+                        "secondary": "#994700",
+                        "secondary-fixed": "#ffdbc8",
+                        "tertiary-fixed": "#eaddff",
+                        "surface-variant": "#e2e2e5",
+                        "on-secondary-container": "#592600",
+                        "secondary-container": "#fb7800",
+                        "surface-dim": "#dadadc",
+                        "outline": "#6e7b6b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "1rem",
+                        "stack-sm": "0.25rem",
+                        "stack-lg": "1.5rem",
+                        "gutter": "0.75rem",
+                        "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pb-24">
+<!-- TopAppBar Shared Component -->
+<header class="bg-white dark:bg-zinc-950 text-[#38B44E] font-plus-jakarta-sans font-bold text-lg sticky top-0 w-full z-50 flex justify-between items-center px-4 h-14 border-b border-zinc-100 dark:border-zinc-800 shadow-sm transition-colors duration-200 active:scale-95">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="flex-1 text-center font-black text-xl tracking-tight">Orders</span>
+<button class="flex items-center justify-center p-2 -mr-2 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900">
+<span class="material-symbols-outlined">help</span>
+</button>
+</header>
+<main class="px-container-margin pt-stack-md flex flex-col gap-stack-lg max-w-md mx-auto">
+<!-- Active Orders Section -->
+<section class="flex flex-col gap-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Orders</h2>
+<!-- Active Order Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border-l-4 border-primary flex flex-col gap-stack-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-on-surface">Order #GM-4921</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today, 10:42 AM</span>
+</div>
+<div class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="font-label-sm text-label-sm font-bold">Arriving in 8 mins</span>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+<div class="w-14 h-14 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="fresh green spinach leaves bundled together in bright lighting" class="w-full h-full object-cover" data-alt="fresh green spinach leaves bundled together in bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz1I0urHvHK1kdOo35PG25guVTVe6edhTdeoNfVjYX6OJh3vG4PiaGw3HQ0ufP0ZaiQ4iLs5vKuxUZz_m1Xx7B2-6f6IKp-zAiY4CZY-HNuji6Y569kFs5j6Y0oiFN5R87Jf5mYS-o6Xv6IrvCthON2KR4eiAoaCFJHZxqm72sB_EAFF44P_T6RYPd0tAaE7Pao2fgKy1QnW062CrsTCJgIH8E-UU8rvNAu16zcRjc5h0u-YtxSLsZYNRqoUNroTJpIgYCWPoq7QM"/>
+</div>
+<div class="w-14 h-14 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="carton of fresh farm milk on a clean white background" class="w-full h-full object-cover" data-alt="carton of fresh farm milk on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwyAbn78U4KEkn866wz7R9kziAbc1DDKNfGxoRQ_ntnftddQVKROV7kmtWqaoMrOUlLs6VSDNwMdcSVnuWUfFrxYb4dNC2IgIvecFar96eMDMBe6qcpgd09_fjcXCbUm6y6JFcyNpcY23BcPmSc3fg0Zx8X9nDNa8G8iO57McF8_rE3rUQiOuvAoYyUE5Z2JEw8ye8NZ74w9GSnkd3uc4meppcw1UD0ti1gOElBCkgSikVsHbFsPoLw1qKrS4XrHkZuyEM7S0pF-g"/>
+</div>
+<div class="w-14 h-14 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="ripe yellow bananas clustered together in soft natural light" class="w-full h-full object-cover" data-alt="ripe yellow bananas clustered together in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7IyC7GmSmZy2-DLQVtne1D2V5xuAajh-_Lr7U5wxD-fa_8ybNYM6OwnBPb0c8EOq0ZXNxTHUkvWtuSfEvXsNnCVOtkQm-gUCuvXx7md5PtEPpd40kJuq2DXu-fjEOGfzyIQrRTpdfgq8WdCbiCimE3IFOlzqLCWkaGZDKIFUpSwosVk3jJqCgcWFiTJHEv-XKgyYNTZTWJhDLkDTaEC4iYyU-S_dM7tAaI5un-6JMLPlzqhQkRsN2lFUUPcpJbrnhQuON8J3d2RM"/>
+</div>
+<div class="w-14 h-14 shrink-0 rounded-lg bg-surface-container flex items-center justify-center text-outline font-label-sm text-label-sm">
+                        +2
+                    </div>
+</div>
+<div class="border-t border-surface-variant pt-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹482</span>
+</div>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-2.5 rounded-lg shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Track
+                    </button>
+</div>
+</div>
+</section>
+<!-- Past Orders Section -->
+<section class="flex flex-col gap-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Past Orders</h2>
+<!-- Past Order Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant/50 flex flex-col gap-stack-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-on-surface">Order #GM-4880</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12 Oct, 06:15 PM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Delivered</span>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide opacity-80">
+<div class="w-12 h-12 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="fresh red apples in bright studio lighting" class="w-full h-full object-cover" data-alt="fresh red apples in bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-sn47VifnVuMCI5oKAszcio1x1roBlBZpSQDSh6AEkxtU2k7MvyHu09kSTm99LfeDmL3gRNMUgDcDruMvT6exngONFoeOTxb_MTlbrbWCWe59V5SdjWiW3azFrVfS0s7egj6VA0I-RilZoX_7zfHNFhJ-PODa-_1WtYKN-vMRjg9l-8TaD3EKR_qGbFZqW8jtpjMCrJygobU5IySyHsevbYjMWbrkjL6u0Vq1x5PkK19UHhzZsY0ga3wNFMptMU16_nETk5zlNg"/>
+</div>
+<div class="w-12 h-12 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="loaf of sliced whole wheat bread on a wooden board" class="w-full h-full object-cover" data-alt="loaf of sliced whole wheat bread on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB75M2zAH7c3xRf2Sc1vmFRnwZ1GoEcE5oUNgMWWhksT2h6HmwjM9XGbvjO9n58OgoYtchfuv0-hzsbYpRr_oXGm4qqKLUKc99usyaUtduLLA8vbGSO0x9QSjnIEgglewDx3jfZPSU3P2c00LOG7NPKGWWRwiJf-7XIZWfrFx3BdMisLy3oOccm8pG3PXsbheWHE81keMwLsEBQXNqP3fXqSmEXUt-V5iHdHedYQT1bF43LPXgyBO5c0uudrVr2daKFADFg3t1cgA0"/>
+</div>
+</div>
+<div class="border-t border-surface-variant pt-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹210</span>
+</div>
+<button class="border border-outline text-on-surface font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-surface-container-low transition-colors">
+                        Reorder
+                    </button>
+</div>
+</div>
+<!-- Past Order Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant/50 flex flex-col gap-stack-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-on-surface">Order #GM-4712</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">08 Oct, 09:30 AM</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Delivered</span>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide opacity-80">
+<div class="w-12 h-12 shrink-0 rounded-lg bg-surface-container overflow-hidden">
+<img alt="white container of fresh greek yogurt" class="w-full h-full object-cover" data-alt="white container of fresh greek yogurt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS6Bv2lebqyKCuObu-Orvi78iKtpUiW7Q0T1Jn1ZDgfQ_kLpUCaKRtcgUwopMZ29D_8zCqorzWWcv9ksFi33kST2f7FEwAb1JvMjlYdMOQkvRYWYMPKVF1fO9PsEtOtpG6rm3VLMoQtFRK6RS2GSTuH3PkIFcB1Ac6LmuBqCxpdif1nbkEB1d-UFZA3Y8j-X06rzT0JBVRiDD3xzV8dlD5DPvWhOEMvMWp1Cf5yLtugNvpnRgm1ni_zEoYMhC2w1MsEIaVtp-Q44c"/>
+</div>
+<div class="w-12 h-12 shrink-0 rounded-lg bg-surface-container flex items-center justify-center text-outline font-label-sm text-label-sm">
+                        +4
+                    </div>
+</div>
+<div class="border-t border-surface-variant pt-3 flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹845</span>
+</div>
+<button class="border border-outline text-on-surface font-label-lg text-label-lg px-4 py-2 rounded-lg hover:bg-surface-container-low transition-colors">
+                        Reorder
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shared Component -->
+<nav class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-[#38B44E] dark:hover:text-[#45c75d] transition-transform duration-150 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-[#38B44E] dark:hover:text-[#45c75d] transition-transform duration-150 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#38B44E] p-2 hover:text-[#38B44E] dark:hover:text-[#45c75d] transition-transform duration-150 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-[#38B44E] dark:hover:text-[#45c75d] transition-transform duration-150 active:scale-90 w-16" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-plus-jakarta-sans text-[10px] font-semibold">Account</span>
+</a>
+</nav>
+</body></html>

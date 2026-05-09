@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beverages - Chandra Daily Mart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#321200",
+                    "tertiary": "#732ee4",
+                    "primary-fixed-dim": "#66df73",
+                    "on-primary-fixed": "#002106",
+                    "on-primary-container": "#003f11",
+                    "on-background": "#1a1c1e",
+                    "surface-container-low": "#f3f3f6",
+                    "surface-bright": "#f9f9fc",
+                    "on-primary-fixed-variant": "#005319",
+                    "tertiary-fixed-dim": "#d2bbff",
+                    "tertiary-fixed": "#eaddff",
+                    "tertiary-container": "#af88ff",
+                    "surface-tint": "#006e24",
+                    "inverse-surface": "#2f3133",
+                    "background": "#f9f9fc",
+                    "on-surface": "#1a1c1e",
+                    "surface-container-high": "#e8e8ea",
+                    "on-tertiary-fixed-variant": "#5a00c6",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#592600",
+                    "primary": "#006e24",
+                    "on-tertiary-fixed": "#25005a",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#82fc8c",
+                    "surface-container-highest": "#e2e2e5",
+                    "secondary-fixed": "#ffdbc8",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f9f9fc",
+                    "on-tertiary-container": "#440099",
+                    "inverse-primary": "#66df73",
+                    "surface-dim": "#dadadc",
+                    "secondary-container": "#fb7800",
+                    "outline": "#6e7b6b",
+                    "inverse-on-surface": "#f0f0f3",
+                    "secondary": "#994700",
+                    "surface-container": "#eeeef0",
+                    "on-secondary-fixed-variant": "#753400",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb68b",
+                    "primary-container": "#38b44e",
+                    "outline-variant": "#bdcab8",
+                    "surface-variant": "#e2e2e5",
+                    "on-surface-variant": "#3e4a3c",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "1.5rem",
+                    "stack-md": "1rem",
+                    "stack-sm": "0.25rem",
+                    "container-margin": "1rem",
+                    "gutter": "0.75rem"
+            },
+            "fontFamily": {
+                    "label-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-sm": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ]
+            },
+            "fontSize": {
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "18px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col pb-[140px] md:pb-[80px] pt-[64px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 shadow-sm transition-transform">
+<div class="flex items-center gap-4">
+<button aria-label="Go back" class="active:scale-95 transition-transform text-on-surface hover:bg-surface-container rounded-full p-2 -ml-2">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Beverages</h1>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Search" class="active:scale-95 transition-transform text-on-surface hover:bg-surface-container rounded-full p-2">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[768px] mx-auto px-container-margin py-stack-md flex flex-col gap-stack-lg">
+<!-- Category Hero Vibe Banner -->
+<section class="relative rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,110,36,0.15)] bg-primary-container text-on-primary-container h-48 flex items-center p-6">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/90 to-transparent z-10"></div>
+<img alt="Assorted cold refreshing beverages on ice" class="absolute inset-0 w-full h-full object-cover z-0 object-right" data-alt="close-up of various icy cold colorful drinks in glasses with condensation, vibrant fresh fruit garnishes, bright summer sunlight, refreshing mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH-3AcOhXEPT-lYAEs2cw4ZTejh5vzAXB9Ndc49EBPtsw8b5XFiHKSOGsDC5JhOMgEtKTvpgd1dtxxlqw-5dIzuFY2fqqV3qtTwaoSOxWA0nXqXeug3OJsZOKq7EpYLfK_32OV0sklDGvGKfhHaApxAB3hGI60zQaCKVwwTul7Tqck4wWHaxO2GqnlORMINWSw6B3N4lj2n3yLkLOIJ57hxvpnVoKG85Epbql_nGyyTkfINL2Gtx1bdzAjjZX3ehETJ1jBNsjXZZg"/>
+<div class="relative z-20 max-w-[60%] flex flex-col gap-stack-sm">
+<span class="font-label-sm bg-primary text-on-primary rounded-full px-2 py-0.5 w-max">Refreshing Deals</span>
+<h2 class="font-headline-md text-on-primary-container">Quench Your Thirst</h2>
+<p class="font-body-md text-on-primary-container/80">Up to 30% off on premium juices and soft drinks.</p>
+</div>
+</section>
+<!-- Category Chips (Horizontal Scroll) -->
+<section class="w-full overflow-x-auto hide-scrollbar pb-2 -mx-container-margin px-container-margin md:mx-0 md:px-0">
+<div class="flex gap-3 w-max">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary shadow-sm font-label-lg whitespace-nowrap active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">local_drink</span>
+                    All Beverages
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm border border-outline-variant font-label-lg whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">coffee_maker</span>
+                    Tea &amp; Coffee
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm border border-outline-variant font-label-lg whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+                    Mineral Water
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm border border-outline-variant font-label-lg whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">liquor</span>
+                    Soft Drinks
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm border border-outline-variant font-label-lg whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">blender</span>
+                    Juices
+                </button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="flex flex-col gap-stack-sm">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-background">Trending in Beverages</h3>
+<button class="font-label-lg text-primary hover:text-primary-container transition-colors">See all</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full z-10">Bestseller</div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Coca-Cola Can" class="w-full h-full object-cover mix-blend-multiply" data-alt="studio shot of a chilled red Coca-Cola can covered in condensation droplets, stark white background, crisp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHVNV5D8A_T03BlmVYSq71Xf0qL_x_ieudCkvfGynDGDgEtRdEivdAziWzT-RiAd9Jkt59KHQbqpJI1srrBwl0gXQONH3Ix1d70cMe1yywrgoxa7g4RvBnLLxODM8wfvWKqJMfI-p6dKln-V0LVGCNHqhXFA1cxspo52vvUcPDKr8DVfRn0XZI4JZGDqaZ-4pae1bqVI8IB-e-KCuWFr2mhDgJQ2eZNxjTgurdMnQcECZXUKWTtRgZs0QL_dV3dVECq4Ne86-qWE"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Soft Drinks</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Coca-Cola Original Taste Soft Drink Can</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">300 ml</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹40</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Tropicana Orange Juice" class="w-full h-full object-cover mix-blend-multiply" data-alt="studio shot of Tropicana orange juice carton next to a glass of fresh juice with ice, white background, bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyma_qt7m0JRaX-HU-EYs2_mPrJHamLHUTbMvKXNSNyb-80vg_5DrJRzxAQzKig9NGPUP7cV5zBmD0b5PYQ7o-4lxICpklfPL1O3WHM2CBDo_jEBkmfndREoerXCPQLXaq7FDTqZJT8Q9g6Vjzv8-7exgY3yhUO4Xtz7L8s4SCa9AJSstyZ6VK7lr9-1MEBqw3DTXqIA9NzLsD5dnWANFWMdYQNm7g_0uPb0HWVS6_8LA1xOuyq_C9Ru5E3zpXGidxMaEPFHgksoA"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Juices</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Tropicana 100% Orange Juice</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">1 L</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹120</span>
+<span class="font-label-sm text-[10px] text-outline line-through">₹140</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Kinley Mineral Water" class="w-full h-full object-cover mix-blend-multiply" data-alt="studio shot of a clear plastic bottle of mineral water, pure white background, crisp refreshing lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEXKOSf6-zevZCCMG0i1_7pMrfgMjYbUdhia2cvvqP8pFR-UvnUrhtlwn7dY3LmXo1BJzRD8iCycEOXlCGuF6IsxSBhsgDQXaI1cBSVDKkljPwgvky1MMiUWpkLTDive6cNl-TOeLiCt4iw8kGsKwtpzgKEW9T7W5flua_CPvB3o6axZACrSPQSejQw_E033Moj8_QH-68J_wtCZSdZqgnq9UgMzPQBWi0t978fclEwXm8bT4Gqq9YanvNHFlGAucaNPy9Vm_eoXA"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Mineral Water</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Kinley Packaged Drinking Water</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">1 L</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹20</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-highest rounded-lg px-2 py-1 shadow-[inset_0_2px_4px_rgba(0,0,0,0.05)] border border-outline-variant/50">
+<button class="w-6 h-6 flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-on-surface w-4 text-center">2</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary hover:text-primary-container active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full z-10">Organic</div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Taj Mahal Tea" class="w-full h-full object-cover mix-blend-multiply" data-alt="studio shot of a box of premium Indian tea leaves next to a steaming cup of dark tea, white background, warm inviting light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwoCCEiIPHK6_Qh_wDEyA6RRXPLJ_tHZziInKjg6rzru-cyWo42SXjBY8h7OpQdVvqmyNDVuiZe9HhwQTU9FhxrwK8K-rxuB_sF67P6UolGPdixz1gmFLQfotdXPdoQ0AUgVCJGFHM3k1VhxwVIRTJom14ASMpS5Ra9mz2kqYTNjmbMaG3ZGeH-Vn6rFfiYKqJGi46qJEQhs7AiO9-ffZP3B-OHBwFQKV-2JZsDPvkwQUPzzrs-ljsbmSPPbDvyGMGcDkloBw9rtY"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Tea &amp; Coffee</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Brooke Bond Taj Mahal Tea</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">250 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹165</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Cart Status -->
+<div class="fixed bottom-[80px] left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[736px] z-40">
+<div class="bg-surface-container-highest text-on-surface rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.15)] border border-outline-variant/30 p-3 flex items-center justify-between cursor-pointer active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 text-primary w-10 h-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">1 item | ₹20</p>
+<p class="font-label-sm text-on-surface-variant">Kinley Mineral Water</p>
+</div>
+</div>
+<button class="flex items-center gap-1 font-label-lg text-primary hover:text-primary-container px-3 py-1.5 rounded-lg">
+                View Cart
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white/90 dark:bg-slate-950/90 backdrop-blur-md px-2 py-3 rounded-t-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-safe md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-green-600 dark:text-green-500 bg-green-50 dark:bg-green-950/50 rounded-xl px-3 py-1 cursor-pointer scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Categories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">search</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">receipt_long</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Orders</span>
+</div>
+</nav>
+</body></html>

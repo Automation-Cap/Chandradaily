@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eggs &amp; Protein - Chandra Daily Mart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#994700",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#732ee4",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "outline-variant": "#bdcab8",
+                        "tertiary-container": "#af88ff",
+                        "surface-tint": "#006e24",
+                        "surface-bright": "#f9f9fc",
+                        "inverse-primary": "#66df73",
+                        "inverse-surface": "#2f3133",
+                        "on-primary-container": "#003f11",
+                        "outline": "#6e7b6b",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed": "#82fc8c",
+                        "on-secondary-container": "#592600",
+                        "surface-container-high": "#e8e8ea",
+                        "secondary-container": "#fb7800",
+                        "on-primary-fixed": "#002106",
+                        "on-secondary-fixed": "#321200",
+                        "primary-container": "#38b44e",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "surface-container-highest": "#e2e2e5",
+                        "surface": "#f9f9fc",
+                        "on-tertiary-fixed": "#25005a",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a00c6",
+                        "background": "#f9f9fc",
+                        "tertiary-fixed": "#eaddff",
+                        "surface-container-low": "#f3f3f6",
+                        "on-surface": "#1a1c1e",
+                        "on-surface-variant": "#3e4a3c",
+                        "primary": "#006e24",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "secondary-fixed": "#ffdbc8",
+                        "on-secondary-fixed-variant": "#753400",
+                        "on-primary-fixed-variant": "#005319",
+                        "surface-variant": "#e2e2e5",
+                        "tertiary-fixed-dim": "#d2bbff",
+                        "primary-fixed-dim": "#66df73",
+                        "on-tertiary-container": "#440099",
+                        "on-background": "#1a1c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.25rem",
+                        "stack-lg": "1.5rem",
+                        "gutter": "0.75rem",
+                        "stack-md": "1rem",
+                        "container-margin": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 pt-16 font-body-md text-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800 shadow-sm transition-all">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 active:scale-95 transition-all text-on-surface">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] text-lg font-bold text-on-surface">Eggs &amp; Protein</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 active:scale-95 transition-all text-on-surface">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<main class="max-w-7xl mx-auto md:px-6 md:pt-8">
+<!-- Category Filter Chips -->
+<div class="px-4 py-3 md:px-0 flex space-x-3 overflow-x-auto hide-scrollbar snap-x snap-mandatory mb-4">
+<button class="snap-start shrink-0 px-4 py-2 bg-primary text-on-primary rounded-full font-label-sm text-label-sm whitespace-nowrap shadow-sm">All Eggs</button>
+<button class="snap-start shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm whitespace-nowrap">White Eggs</button>
+<button class="snap-start shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm whitespace-nowrap">Brown Eggs</button>
+<button class="snap-start shrink-0 px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm whitespace-nowrap">Plant-based</button>
+</div>
+<!-- Vibe Banner -->
+<div class="px-4 md:px-0 mb-6">
+<div class="relative w-full h-32 rounded-xl overflow-hidden bg-secondary-container text-on-secondary-container shadow-sm flex items-center p-6">
+<div class="relative z-10 w-2/3">
+<h2 class="font-headline-md text-headline-md mb-1">Farm Fresh</h2>
+<p class="font-body-md text-body-md opacity-90">Sourced directly from local farms daily.</p>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-transparent to-secondary-container opacity-20"></div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="px-4 md:px-0 grid grid-cols-2 md:grid-cols-4 gap-4 pb-8">
+<!-- Product Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col relative">
+<div class="absolute top-2 left-2 z-10 bg-tertiary text-on-tertiary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Bestseller</div>
+<div class="w-full aspect-square relative bg-white flex items-center justify-center p-4">
+<img alt="Carton of fresh white eggs on clean surface" class="object-contain w-full h-full" data-alt="close up of a carton of fresh white chicken eggs on a clean light surface studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKt_K8rpnSlkUrJ-YP2UDj9dPPusgpHD9ZNAL-RZmxAFRAnMg-ClVHgkxacvdL9PMkD1n8jMDWrPQD6QPQu-RF6k9ECrqL8utb-Z628A1YIt54CYeh2lrPGXPveSGrj0PIVYKDNKS1OzAac-W3G6Q_CbwDBcP8_Fp2hUmlfY_wVLx-xUHy2ChbTRuCDPiv_NLArz2vPaobdbeeqbA2q5knWqkMCqMog5MWSx2D_8NSWDowGbycMTgEOgcr894dzFzU4hNERcF2d20"/>
+</div>
+<div class="p-3 flex-1 flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Classic White Eggs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">6 pieces</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹45</span>
+</div>
+<button class="bg-primary-container text-on-primary-container border border-primary text-primary px-4 py-1.5 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-colors">ADD</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col relative">
+<div class="w-full aspect-square relative bg-white flex items-center justify-center p-4">
+<img alt="Tray of premium brown organic eggs" class="object-contain w-full h-full" data-alt="tray of premium brown organic eggs natural lighting rustic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOvnnWwd223KkMBpkwktG9uOP8AEAJXWEomPb9bf5h10Jl-M5L2b1riEbCpTWOOtzsuvg96XoJSx0As0ON6i_WjYEaoBO7eO1kdDhqnuwj3ODCmYKAEzlquIb3Zv4m8LQp5qPyLPhpD1hZXPSm7_gR5IPs2VGxFCuMZsr-isdLo_cC-GJUsIHeyq1mGWgu6Sn0MDa4w46-h-yMwIuI8oidRlAc9RfL6BrFlNBm61JbSbDWOwlWKpihnwr1hleJIcQ19-p80HaE7eA"/>
+</div>
+<div class="p-3 flex-1 flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Organic Free Range Brown Eggs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">6 pieces</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹75</span>
+</div>
+<button class="bg-primary-container text-on-primary-container border border-primary text-primary px-4 py-1.5 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-colors">ADD</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col relative">
+<div class="absolute top-2 left-2 z-10 bg-secondary text-on-secondary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Vegan</div>
+<div class="w-full aspect-square relative bg-white flex items-center justify-center p-4">
+<img alt="Bottle of plant based liquid egg alternative" class="object-contain w-full h-full" data-alt="bottle of yellow liquid plant based vegan egg alternative on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSJp7LFMgnF8xci6nFLpxqVCdq9FbZLsQgiHb9LEjMO_5kLKahq-TkmWJov5nl3t_vn30kCft49Y6BjcOmtMfc_p-gERHNYKuTfDKnuNr8-153TpQDOYkkw4whutmoTRMoJ8oB62u-gEMj9qmSWNUM0TzKTQZSaBQRX_5tcY_pjji0ZKZA1isuemvGlP9sGyaHy_FTdIQaINAW3_Q48taAc-3lpXNfAUIQrn0BKFHA0mRvxcCNS8wZ9g_IUA9V5EJIhrcJftAlDfk"/>
+</div>
+<div class="p-3 flex-1 flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Plant-Based Liquid Egg</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">350 ml</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹199</span>
+<span class="text-xs text-on-surface-variant line-through ml-1">₹250</span>
+</div>
+<div class="flex items-center bg-primary text-on-primary rounded-lg overflow-hidden">
+<button class="px-2 py-1.5 hover:bg-black/10"><span class="material-symbols-outlined text-sm block" data-icon="remove">remove</span></button>
+<span class="font-label-lg text-label-lg px-2">1</span>
+<button class="px-2 py-1.5 hover:bg-black/10"><span class="material-symbols-outlined text-sm block" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-container-highest flex flex-col relative">
+<div class="w-full aspect-square relative bg-white flex items-center justify-center p-4">
+<img alt="Large tray of white eggs" class="object-contain w-full h-full" data-alt="large cardboard tray filled with white eggs top down view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HT_IvHMrsHFILI4j6VkNd1-7rmG78_pmaD67FRuTRsDk5w3S_riJ6XOhpvASGzAo27QoQe-3MvRJtbGljfqfFYk2OQlwYtFOHi2hKJOgHpzOld7OrZXIl9HhGVqaIAZESl_vbw-k6j_sh0MUM3CHYrW1IKg-6lPbpG1yz_9I87Q7iGxeXs-RDydrBrnDq-AJVg-lEI0cUHyO9KO6r-EY4pTGHEeX-Ju13JlVvs-0exjvFUtdLqyPWw5dsC23CluMJYpLMiEtCoE"/>
+</div>
+<div class="p-3 flex-1 flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Family Pack White Eggs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">30 pieces</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">₹210</span>
+</div>
+<button class="bg-primary-container text-on-primary-container border border-primary text-primary px-4 py-1.5 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-colors">ADD</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-green-600 dark:text-green-500 font-bold bg-green-50 dark:bg-green-950/30 rounded-xl px-3 py-1 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Categories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Account</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - Chandra Daily Mart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e2e2e5",
+                        "on-tertiary-fixed": "#25005a",
+                        "on-primary-fixed": "#002106",
+                        "surface-container-high": "#e8e8ea",
+                        "outline": "#6e7b6b",
+                        "on-tertiary-container": "#440099",
+                        "secondary-fixed": "#ffdbc8",
+                        "secondary": "#994700",
+                        "surface-variant": "#e2e2e5",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#003f11",
+                        "tertiary": "#732ee4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeef0",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9fc",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1a1c1e",
+                        "tertiary-fixed-dim": "#d2bbff",
+                        "surface-container-low": "#f3f3f6",
+                        "secondary-container": "#fb7800",
+                        "on-tertiary-fixed-variant": "#5a00c6",
+                        "on-primary-fixed-variant": "#005319",
+                        "surface-bright": "#f9f9fc",
+                        "on-surface-variant": "#3e4a3c",
+                        "primary-fixed-dim": "#66df73",
+                        "on-secondary-container": "#592600",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2f3133",
+                        "on-background": "#1a1c1e",
+                        "inverse-primary": "#66df73",
+                        "tertiary-container": "#af88ff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "surface-tint": "#006e24",
+                        "primary-fixed": "#82fc8c",
+                        "primary-container": "#38b44e",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "outline-variant": "#bdcab8",
+                        "surface": "#f9f9fc",
+                        "on-secondary-fixed-variant": "#753400",
+                        "on-secondary-fixed": "#321200",
+                        "tertiary-fixed": "#eaddff",
+                        "primary": "#006e24",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "1rem",
+                        "stack-lg": "1.5rem",
+                        "gutter": "0.75rem",
+                        "stack-sm": "0.25rem",
+                        "container-margin": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+        /* Hide scrollbar for clean UI but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col pt-safe">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 shadow-sm z-40">
+<div class="flex items-center justify-between px-4 py-3 w-full">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-green-600 dark:text-green-500" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-on-surface flex-1 text-center">Notifications</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="flex-1 flex flex-col pb-24">
+<!-- Quick Filters -->
+<div class="sticky top-[61px] bg-background/95 backdrop-blur z-30 px-container-margin py-3 border-b border-outline-variant/30 flex gap-2 overflow-x-auto no-scrollbar">
+<button class="px-4 py-2 bg-primary-container text-on-primary-container rounded-full font-label-lg text-label-lg whitespace-nowrap active:scale-95 transition-transform duration-200 flex items-center gap-1 shadow-[0_2px_8px_rgba(56,180,78,0.15)]">
+                All
+            </button>
+<button class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label-lg text-label-lg whitespace-nowrap active:scale-95 transition-transform duration-200 flex items-center gap-1 border border-outline-variant/50">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_shipping">local_shipping</span> Orders
+            </button>
+<button class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full font-label-lg text-label-lg whitespace-nowrap active:scale-95 transition-transform duration-200 flex items-center gap-1 border border-outline-variant/50">
+<span class="material-symbols-outlined text-[18px]" data-icon="sell">sell</span> Offers
+            </button>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col px-container-margin py-stack-md gap-stack-md">
+<!-- Date Divider -->
+<div class="flex items-center gap-3 py-2">
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Today</span>
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+</div>
+<!-- Unread Order Notification -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-primary-container/20 flex gap-4 relative active:scale-[0.98] transition-transform cursor-pointer">
+<!-- Unread Indicator -->
+<div class="absolute top-4 right-4 w-2.5 h-2.5 bg-primary rounded-full"></div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="flex-1 flex flex-col gap-1 pr-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Order Out for Delivery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Your order #GM-8924 is just 5 minutes away. Get ready to receive your fresh groceries!</p>
+<span class="font-label-sm text-label-sm text-outline mt-1">2 mins ago</span>
+</div>
+</div>
+<!-- Unread Offer Notification -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-secondary-container/20 flex gap-4 relative active:scale-[0.98] transition-transform cursor-pointer">
+<!-- Unread Indicator -->
+<div class="absolute top-4 right-4 w-2.5 h-2.5 bg-secondary-container rounded-full"></div>
+<div class="w-12 h-12 rounded-full bg-secondary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[24px]" data-icon="sell" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sell</span>
+</div>
+<div class="flex-1 flex flex-col gap-1 pr-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Flat 50% Off on Fruits!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Stock up on fresh seasonal fruits for the weekend with our special happy hour discount. Valid till 8 PM.</p>
+<span class="font-label-sm text-label-sm text-outline mt-1">1 hour ago</span>
+</div>
+</div>
+<!-- Read General Notification -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.02)] border border-outline-variant/20 flex gap-4 opacity-80 active:scale-[0.98] transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="notifications">notifications</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Welcome to Chandra Daily Mart Plus</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Your subscription is active. Enjoy free delivery on all orders above ₹99.</p>
+<span class="font-label-sm text-label-sm text-outline mt-1">3 hours ago</span>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="flex items-center gap-3 py-2 mt-2">
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Yesterday</span>
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+</div>
+<!-- Read Order Notification -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_4px_12px_rgba(0,0,0,0.02)] border border-outline-variant/20 flex gap-4 opacity-80 active:scale-[0.98] transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Order Delivered</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Your order #GM-8910 was successfully delivered. Tap to rate your experience.</p>
+<span class="font-label-sm text-label-sm text-outline mt-1">Yesterday, 4:30 PM</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<!-- Inactive: Home -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-1 hover:text-green-600 dark:hover:text-green-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-1">Home</span>
+</a>
+<!-- Inactive: Categories -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-1 hover:text-green-600 dark:hover:text-green-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="grid_view">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-1">Categories</span>
+</a>
+<!-- Active: Notifications -->
+<a class="flex flex-col items-center justify-center bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-xl px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="notifications" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-1">Notifications</span>
+</a>
+<!-- Inactive: Profile -->
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-1 hover:text-green-600 dark:hover:text-green-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

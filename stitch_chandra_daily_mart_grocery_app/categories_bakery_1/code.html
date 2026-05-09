@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chandra Daily Mart - Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#321200",
+                      "tertiary": "#732ee4",
+                      "primary-fixed-dim": "#66df73",
+                      "on-primary-fixed": "#002106",
+                      "on-primary-container": "#003f11",
+                      "on-background": "#1a1c1e",
+                      "surface-container-low": "#f3f3f6",
+                      "surface-bright": "#f9f9fc",
+                      "on-primary-fixed-variant": "#005319",
+                      "tertiary-fixed-dim": "#d2bbff",
+                      "tertiary-fixed": "#eaddff",
+                      "tertiary-container": "#af88ff",
+                      "surface-tint": "#006e24",
+                      "inverse-surface": "#2f3133",
+                      "background": "#f9f9fc",
+                      "on-surface": "#1a1c1e",
+                      "surface-container-high": "#e8e8ea",
+                      "on-tertiary-fixed-variant": "#5a00c6",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#592600",
+                      "primary": "#006e24",
+                      "on-tertiary-fixed": "#25005a",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#82fc8c",
+                      "surface-container-highest": "#e2e2e5",
+                      "secondary-fixed": "#ffdbc8",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f9f9fc",
+                      "on-tertiary-container": "#440099",
+                      "inverse-primary": "#66df73",
+                      "surface-dim": "#dadadc",
+                      "secondary-container": "#fb7800",
+                      "outline": "#6e7b6b",
+                      "inverse-on-surface": "#f0f0f3",
+                      "secondary": "#994700",
+                      "surface-container": "#eeeef0",
+                      "on-secondary-fixed-variant": "#753400",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "primary-container": "#38b44e",
+                      "outline-variant": "#bdcab8",
+                      "surface-variant": "#e2e2e5",
+                      "on-surface-variant": "#3e4a3c",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "1.5rem",
+                      "stack-sm": "0.25rem",
+                      "gutter": "0.75rem",
+                      "stack-md": "1rem",
+                      "container-margin": "1rem"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "18px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen pb-[90px] pt-[70px]">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 shadow-sm transition-colors opacity-100 duration-150">
+<button class="text-green-600 dark:text-green-500 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors active:scale-95 transition-transform p-1 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-green-600 dark:text-green-500">Shop Categories</h1>
+<button class="text-green-600 dark:text-green-500 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors active:scale-95 transition-transform p-1 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</header>
+<main class="max-w-[768px] mx-auto w-full px-container-margin overflow-x-hidden flex flex-col gap-stack-lg">
+<!-- Vibe Banner / Hero -->
+<section class="mt-stack-sm w-[calc(100%+2rem)] -ml-4 pl-4 overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+<div class="flex gap-gutter w-max pr-4">
+<div class="snap-center shrink-0 w-[320px] h-[160px] rounded-xl overflow-hidden relative shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex items-center px-6 bg-surface-container-high text-on-primary">
+<img alt="Freshly baked artisan breads" class="absolute inset-0 w-full h-full object-cover opacity-90" data-alt="close-up of freshly baked crusty artisan bread on a rustic wooden table with golden warm morning sunlight streaming through a window, creating a cozy and inviting bakery atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCWf8Ul2n_Smw1Xr26GgGv_9AbEt2RuAQnIiCTb78JndZaRUw7rPHYIo4oUyboYkzfQfkgztNOXD9Ps51bw4bZL8cBPXhz26kzzFc41L21Dg94FF0qANZ-PZgkihwTpP0zmAn2CoS9jRFoSaQ-SC7jHCuzlfibL3YIx8_qnw36DXAGTdUqcnk5amXLu2lyrQGVDNAPOYlrUkykGm1ZH4reR6K038fSTjCnjiyDQCJ6ARJLb1Yczn7eiyYMp5ZrVIN1GnMKjHio0wA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex flex-col justify-center p-6 z-10">
+<h2 class="font-headline-md text-headline-md text-on-primary mb-1">Oven Fresh Bakery</h2>
+<p class="font-body-md text-body-md text-on-primary/90">Warm, soft, and delivered fast.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Chips (Horizontal Scroll) -->
+<section class="w-[calc(100%+2rem)] -ml-4 pl-4 overflow-x-auto hide-scrollbar pb-2">
+<div class="flex gap-gutter w-max pr-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+<span class="font-label-lg text-label-lg whitespace-nowrap">All Bakery</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[18px]">breakfast_dining</span>
+<span class="font-label-lg text-label-lg whitespace-nowrap">Breads</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[18px]">cookie</span>
+<span class="font-label-lg text-label-lg whitespace-nowrap">Cookies</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[18px]">cake</span>
+<span class="font-label-lg text-label-lg whitespace-nowrap">Cakes &amp; Muffins</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-high transition-colors border border-surface-variant">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+<span class="font-label-lg text-label-lg whitespace-nowrap">Rusks</span>
+</button>
+</div>
+</section>
+<!-- Section Title -->
+<section class="flex flex-col gap-stack-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-background">Everyday Essentials</h2>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Standard Card 1 (was Featured Large Card) -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full z-10">Bestseller</div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Whole Wheat Brown Bread" class="w-full h-full object-cover mix-blend-multiply" data-alt="sliced whole wheat brown bread loaf on a wooden cutting board with soft warm bakery lighting and flour dusting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAczwQA3bhJt4m9yoYv3XqkF9GBOXmeuAsRAUytJCwrQZz8NWpmOKjAv2azvLb9R1eQyrQ8dPCVnDGe8Y5a6olt0IdXijzrE6vA_EP8SI_cxKmvy_zdQp0CX_wHNLxN329GlRRmu3BU4Lx_WCRQfz59r4Mr_nOvIsDKenF48ZTOxQbGvtZbPJssqJj1p5RrA61nQzN7xqwVs_7MGh9Lzv4lTNfrkVRWL01KFmPBKwhNi7ZB9TbH7jICmv__5GyV0rvV_Yg8jPZWk5M"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Bakery</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Premium Whole Wheat Brown Bread</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">400g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹45</span>
+<span class="font-label-sm text-[10px] text-outline line-through">₹50</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Standard Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-[10px] px-1.5 py-0.5 rounded flex items-center gap-1 border border-outline-variant/50 z-10">
+<span class="material-symbols-outlined text-[12px] text-secondary">local_fire_department</span> Trending
+                    </div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Premium Suji Rusk" class="w-full h-full object-cover mix-blend-multiply" data-alt="crispy golden suji rusks stacked neatly next to a cup of hot steaming chai on a ceramic saucer with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkLT0z6AUEY1wIwkc_ViOkcSU99WHBxA6pFDF2XPSalf1DqSbECzFQ4CW0KUEavQ1KWgGouQvNeKMGX69kRPWQgmND6UcEqNbipd9EUKqGv-luJ9ymBe_vlbtrlt5gCBQgIzn2xaOCxRfC8_Jy1Y61GUHsbMR6thiLWJKxOOXL7hQ3JbH_7BNN6VLthGpCIg1ul5zK85CM-dmjrv_biTYmzRM-jObwi6TXFe4G1x63VwzyGCWYz6s2Dq4KaTmBFJdrRUzI-mbkCmw"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Bakery</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Crispy Suji Rusk</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">300g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹60</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Standard Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Choco Chip Muffins" class="w-full h-full object-cover mix-blend-multiply" data-alt="three fluffy chocolate chip muffins in paper liners sitting on a marble countertop with rich warm lighting highlighting the chocolate pieces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoxRNKWJeH-7MToWcPClEmC1DGutpmGZaGm765PZCEuno_vhvQP_Ig8gZdNVZ8628uWJutsKr1jSqh3FFQXIx6wdosETggpbaIILfL1iFzGcgrcnayB5O_Fo-3JURDblk_QiPJXfD-ezrB1YhmQxyt-5ezMjodm9tyILvYoN_XnOpM4V2VLczBGu3dDzebvbRYC52Yt2FCR6wEXyev4AECyJwy7q1TeaG_w0jH0-8lnc3l4xgZd95GQa9d2iCuVfvDo8G42E5cUOs"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Bakery</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Choco Chip Muffins</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">Pack of 2</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹40</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Standard Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Butter Cookies" class="w-full h-full object-cover mix-blend-multiply" data-alt="assortment of golden baked butter cookies in a vintage tin box with warm inviting lighting and crumbs on the table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwFWiIxZfRSUOL-Kohoy1vYTQdL3wvw1tPbX4TqZCqOThVDERNFiOiF7jNkhEmIuAJAW6G35D_upX0XbF8_coqx3yyK84VPoZY_yVdzXRD54J6XohySPVT7k0r462EQ5DwA1JYcZSZajxnWbgxRLfzH5NAsVqUO3LSyjjts-_kWDN3Hqnc-fCA9VF0IKrBw72o-hN2q-rfk6J8WPjGRLzkBKli2sYueuZGNbJmhEW5S4Iazjii-AC3GBg_N-TWYmm8ZLySJ8rKc-0"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Bakery</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Danish Butter Cookies</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">150g Box</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹120</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+<!-- Standard Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Black Forest Cake Slice" class="w-full h-full object-cover mix-blend-multiply" data-alt="slice of rich black forest cake with cherries and cream on a pristine white plate with a soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxvCKl7nb3jgN__lnU8rQvqd0F_2UYckz1E0vismdLc1kZFbg3Q5RoQWa7udp1NH-8Zd-rlYDucJM_OumvXlG5HDaniEHDA1Rt1Ogqb9Z4bzE3QCEw2lFsNWVf9EHxXWsIxNeoATjt3H4seE-C7sjaPfPiKNwFF-R6iMs6rZ6a2fFfzoVwz3RlUrUBYD6ejTKsHAQ0TJCWmKULjB5_xGkoxSmalNUdMmy3q_wvdG2GEPLWznzZqNoPxRAbiRX47cl_x6KBIqwLA8Y"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Bakery</span>
+<h4 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Black Forest Pastry</h4>
+<span class="font-body-md text-[12px] text-on-surface-variant">1 Piece</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹85</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar matching SCREEN_36 -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white/90 dark:bg-slate-950/90 backdrop-blur-md px-2 py-3 rounded-t-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-safe">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-green-600 dark:text-green-500 bg-green-50 dark:bg-green-950/50 rounded-xl px-3 py-1 cursor-pointer scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Categories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">search</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">receipt_long</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Orders</span>
+</div>
+</nav>
+</body></html>

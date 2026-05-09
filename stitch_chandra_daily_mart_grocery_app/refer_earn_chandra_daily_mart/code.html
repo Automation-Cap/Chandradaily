@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Refer &amp; Earn - Chandra Daily Mart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#bdcab8",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#25005a",
+                    "primary-fixed": "#82fc8c",
+                    "on-secondary-container": "#592600",
+                    "on-tertiary-container": "#440099",
+                    "surface-dim": "#dadadc",
+                    "secondary": "#994700",
+                    "tertiary": "#732ee4",
+                    "background": "#f9f9fc",
+                    "primary-fixed-dim": "#66df73",
+                    "on-secondary-fixed": "#321200",
+                    "on-background": "#1a1c1e",
+                    "surface-container": "#eeeef0",
+                    "tertiary-container": "#af88ff",
+                    "secondary-fixed-dim": "#ffb68b",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#eaddff",
+                    "outline": "#6e7b6b",
+                    "inverse-surface": "#2f3133",
+                    "tertiary-fixed-dim": "#d2bbff",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f0f0f3",
+                    "surface": "#f9f9fc",
+                    "on-primary-fixed": "#002106",
+                    "on-primary-container": "#003f11",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#5a00c6",
+                    "secondary-fixed": "#ffdbc8",
+                    "on-surface": "#1a1c1e",
+                    "inverse-primary": "#66df73",
+                    "surface-bright": "#f9f9fc",
+                    "on-primary": "#ffffff",
+                    "primary": "#006e24",
+                    "surface-tint": "#006e24",
+                    "surface-container-highest": "#e2e2e5",
+                    "surface-variant": "#e2e2e5",
+                    "secondary-container": "#fb7800",
+                    "surface-container-high": "#e8e8ea",
+                    "primary-container": "#38b44e",
+                    "on-primary-fixed-variant": "#005319",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#753400",
+                    "surface-container-low": "#f3f3f6",
+                    "on-surface-variant": "#3e4a3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "1.5rem",
+                    "container-margin": "1rem",
+                    "stack-sm": "0.25rem",
+                    "stack-md": "1rem",
+                    "gutter": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "label-sm": [
+                            "Be Vietnam Pro"
+                    ],
+                    "headline-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-md": [
+                            "Be Vietnam Pro"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "18px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-24">
+<!-- Top App Bar Component -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800 pt-safe">
+<div class="flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-sm tracking-tight text-on-background">Vinay Nagar, Faridabad</span>
+<span class="material-symbols-outlined text-on-background">arrow_drop_down</span>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Portrait of a young person smiling, soft lighting, professional headshot style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLPdcOQovR3bxjqqJadhXediENORj0L4ZdHTmQb82vwp7P8hP1rVxdCwr69vLR1LzLKsHLAG5tFXXryW8Plu0_3b8qERDMA1io-_gFSP727rvk8BNVOxReDX8FHmr4ZsR9R29s4FA2KJR0ntf3GZlnjKPhVxxI2IKxej6IZlpQymFCZQ3YTCmP3zCClEynmCmMBmjnMZ4beaZdbv9U-90b0BYm29i2dh-j69ipQ3VwFtnv5cxNGvImjsM6u0UbyoIDHCoD2h_dC8"/>
+</div>
+</div>
+</header>
+<main class="pt-[calc(64px+env(safe-area-inset-top,0px))] px-container-margin max-w-md mx-auto space-y-stack-lg pb-safe">
+<!-- Hero Section -->
+<section class="mt-stack-lg text-center space-y-stack-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary">Invite friends, get ₹100 off!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[280px] mx-auto">Share the joy of 10-minute delivery with your friends and neighbors in Vinay Nagar.</p>
+</section>
+<!-- Illustration -->
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-primary-container/20 flex items-center justify-center">
+<img alt="Friends sharing groceries" class="w-full h-full object-cover rounded-xl shadow-sm" data-alt="Group of diverse friends laughing and sharing fresh groceries and fruits on a sunny day outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvBhxKYhyUee6hjH2M0xlPN9BQK8nFosdmzAqT7rutM_E9VdvYXtSx6vI-QDte8s1zN4yfz5ZHFmirm49ZN7Yg-J0Fb0BTH40H4nfaPrE06JZZSeZvxwitI5Ms1P9gB1OHRcJAue3ZJwYgZWxDbXhAf-lsEmOyB4acSRQwUAeJpMNvT8A4h5z8XG75uYOgtrzvTDrcVsLhLzqjzfY04zIJ68aTlLy0RYcxrEO5dHl0lR-TIyi2txAIFiCLadjGZLBDX-nYaH51zyM"/>
+</div>
+<!-- Referral Code Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-surface-variant flex flex-col items-center justify-center space-y-4">
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Your Referral Code</span>
+<div class="bg-primary-container/10 border-2 border-primary border-dashed rounded-lg px-8 py-4 flex items-center justify-center gap-3 w-full cursor-pointer hover:bg-primary-container/20 transition-colors">
+<span class="font-headline-md text-headline-md text-primary tracking-widest">CHANDRA100</span>
+<span class="material-symbols-outlined text-primary">content_copy</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Tap to copy code</p>
+</div>
+<!-- Social Sharing -->
+<section class="space-y-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-on-background text-center">Share via</h2>
+<div class="grid grid-cols-3 gap-gutter">
+<button class="bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors rounded-xl py-4 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+<span class="font-label-sm text-label-sm">WhatsApp</span>
+</button>
+<button class="bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 transition-colors rounded-xl py-4 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[32px]">send</span>
+<span class="font-label-sm text-label-sm">Telegram</span>
+</button>
+<button class="bg-surface-variant text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-xl py-4 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[32px]">sms</span>
+<span class="font-label-sm text-label-sm">SMS</span>
+</button>
+</div>
+</section>
+<!-- How it Works -->
+<section class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<h2 class="font-headline-sm text-headline-sm text-on-background">How it works</h2>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg">1</div>
+<div class="w-0.5 h-full bg-outline-variant my-1"></div>
+</div>
+<div class="pb-6">
+<h3 class="font-label-lg text-label-lg text-on-background">Share your code</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Send your unique code to friends and family.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg">2</div>
+<div class="w-0.5 h-full bg-outline-variant my-1"></div>
+</div>
+<div class="pb-6">
+<h3 class="font-label-lg text-label-lg text-on-background">Friend signs up &amp; orders</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">They get ₹50 off their first order of ₹200 or more.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg">3</div>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-background">You both get rewards</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">You get ₹100 added to your wallet once their order is delivered.</p>
+</div>
+</div>
+</section>
+<!-- Referral History -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-surface-variant grid grid-cols-2 gap-4 divide-x divide-outline-variant">
+<div class="flex flex-col items-center justify-center text-center space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Earned</span>
+<span class="font-headline-md text-headline-md text-secondary-container">₹300</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Friends Invited</span>
+<span class="font-headline-md text-headline-md text-primary">3</span>
+</div>
+</section>
+</main>
+<!-- Bottom Nav Bar Component -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white/98 dark:bg-slate-900/98 border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-safe block md:hidden">
+<div class="flex justify-around items-center h-20 px-2 w-full">
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 opacity-80 hover:text-green-500 dark:hover:text-green-300 transition-colors font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-600 dark:text-green-400 transition-all scale-110 font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<span>Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 opacity-80 hover:text-green-500 dark:hover:text-green-300 transition-colors font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span>Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 opacity-80 hover:text-green-500 dark:hover:text-green-300 transition-colors font-['Plus_Jakarta_Sans'] text-[10px] font-semibold" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

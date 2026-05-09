@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vegetables - Chandra Daily Mart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#994700",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#732ee4",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "outline-variant": "#bdcab8",
+                        "tertiary-container": "#af88ff",
+                        "surface-tint": "#006e24",
+                        "surface-bright": "#f9f9fc",
+                        "inverse-primary": "#66df73",
+                        "inverse-surface": "#2f3133",
+                        "on-primary-container": "#003f11",
+                        "outline": "#6e7b6b",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed": "#82fc8c",
+                        "on-secondary-container": "#592600",
+                        "surface-container-high": "#e8e8ea",
+                        "secondary-container": "#fb7800",
+                        "on-primary-fixed": "#002106",
+                        "on-secondary-fixed": "#321200",
+                        "primary-container": "#38b44e",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "surface-container-highest": "#e2e2e5",
+                        "surface": "#f9f9fc",
+                        "on-tertiary-fixed": "#25005a",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a00c6",
+                        "background": "#f9f9fc",
+                        "tertiary-fixed": "#eaddff",
+                        "surface-container-low": "#f3f3f6",
+                        "on-surface": "#1a1c1e",
+                        "on-surface-variant": "#3e4a3c",
+                        "primary": "#006e24",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "secondary-fixed": "#ffdbc8",
+                        "on-secondary-fixed-variant": "#753400",
+                        "on-primary-fixed-variant": "#005319",
+                        "surface-variant": "#e2e2e5",
+                        "tertiary-fixed-dim": "#d2bbff",
+                        "primary-fixed-dim": "#66df73",
+                        "on-tertiary-container": "#440099",
+                        "on-background": "#1a1c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.25rem",
+                        "stack-lg": "1.5rem",
+                        "gutter": "0.75rem",
+                        "stack-md": "1rem",
+                        "container-margin": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pt-16 pb-24 flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-zinc-950 docked full-width top-0 border-b shadow-sm fixed left-0 w-full z-50 flex items-center justify-between px-4 h-16 border-zinc-100 dark:border-zinc-800">
+<button class="text-green-600 dark:text-green-500 hover:bg-zinc-50 dark:hover:bg-zinc-900 active:scale-95 transition-all p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] text-lg font-bold text-green-600 dark:text-green-500">Categories</h1>
+<button class="text-green-600 dark:text-green-500 hover:bg-zinc-50 dark:hover:bg-zinc-900 active:scale-95 transition-all p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<main class="flex-grow px-container-margin pt-stack-md w-full max-w-md mx-auto sm:max-w-xl md:max-w-4xl">
+<!-- Category Title & Vibe -->
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Fresh Vegetables</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Daily essentials delivered instantly to Vinay Nagar.</p>
+</div>
+<!-- Filter Chips (Static representation for this view) -->
+<div class="flex gap-2 overflow-x-auto hide-scrollbar mb-stack-lg pb-1">
+<button class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap border border-primary-container shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+                All Vegetables
+            </button>
+<button class="bg-surface text-on-surface border border-outline-variant px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1">
+                 Root Veggies
+            </button>
+<button class="bg-surface text-on-surface border border-outline-variant px-4 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1">
+                 Leafy Greens
+            </button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Product Card: Tomatoes -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-surface-variant">
+<div class="absolute top-2 left-2 z-10 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] uppercase font-bold shadow-sm">
+                    Bestseller
+                </div>
+<div class="aspect-square bg-surface-container-low rounded-lg mb-2 overflow-hidden relative">
+<img alt="Tomatoes" class="w-full h-full object-cover" data-alt="Fresh, bright red cluster of vine ripe tomatoes with green stems, dew drops, bright studio lighting against clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJnUNZ2VdhE0OYEPzoDIgoRMYMTY9MX4RumNRupZZQyGLqbiZ76UwCoWsBtV_27YWSKMCB6LLs11l-29cA68bHPPf6RZUMQXcIo1j1p8SLn3xDaOwvBAmVBYukCCZHpdmNpHkEFkvXcCgpPrC1Xxc4cW63eDLDd5ARDjIv-h69d0Sw6iMcB20y-eYK3-q1dpa5Rzr_bbN_6cJnuDAM3vOT3oUSbd8M0BXjYqCgzDWGPAP7s-el_IQ5uI4p_EutwUFwV0vDTtOg6Uo"/>
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Fresh Hybrid Tomato</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant mb-2">500 g</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface">₹32</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹45</span>
+</div>
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm shadow-sm hover:bg-opacity-90 active:scale-95 transition-all">
+                            ADD
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card: Onions -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-surface-variant">
+<div class="aspect-square bg-surface-container-low rounded-lg mb-2 overflow-hidden relative">
+<img alt="Onions" class="w-full h-full object-cover" data-alt="Pile of fresh red onions with dry outer skin, bright overhead lighting, clean white background, high resolution food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE88HFIgqXGaaEmQUC7BRzfmeNW6oWuF4_6Vzi7t9ddwL6tFLWNrR0rq3eAEURC9lv-DrrPmtWde5c_MAo5PtGxTK5Afgk-RZ84emgBbV70EqjmZWDujahl2eA9dGq4b7VpheeGxKK9cfjKQau47WJXPXWZC381N1tb0gteB3AgrGh-8O2AiGTex2K8vlqwSTILu6vuNiQUBZ36BisJKg6D0Unx5G5t3SGyEll4CnQfz4vXABJPGM2Yuuxfv1VCrv8cBUP3kQZQOA"/>
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Onion (Pyaz)</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant mb-2">1 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface">₹45</span>
+</div>
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm shadow-sm hover:bg-opacity-90 active:scale-95 transition-all">
+                            ADD
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card: Potatoes -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-surface-variant">
+<div class="absolute top-2 left-2 z-10 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full font-label-sm text-[10px] uppercase font-bold shadow-sm">
+                    Staple
+                </div>
+<div class="aspect-square bg-surface-container-low rounded-lg mb-2 overflow-hidden relative">
+<img alt="Potatoes" class="w-full h-full object-cover" data-alt="Raw russet potatoes scattered on a clean white surface, earthy tones, natural soft lighting, high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQFWfm99oVZYNzJaiSYT0W9mdKFD6r_N4C1ra60h66iD1y5gwP6V2D-26HmARcNnxflLSXZHZRvrY828PQr1-1Othgkryb21ZZ51FpyLCjbLXuZqyClCOmmgGwAvCtvEYMAtR2u86cURI36I_e5hnRg839qTGJw0tGjWfIUpngKOapQ8GrLyQyNsCLFDR0bOJbjoJXBYZPcisAm_QdDioeVEc5lFJnb3ix260vbqs91cW1IqSfWPS1u8ocnhc-xRceQD3wyAdYFV0"/>
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Potato (Aloo)</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant mb-2">1 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface">₹38</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹42</span>
+</div>
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm shadow-sm hover:bg-opacity-90 active:scale-95 transition-all">
+                            ADD
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card: Green Chilies -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex flex-col relative border border-surface-variant">
+<div class="aspect-square bg-surface-container-low rounded-lg mb-2 overflow-hidden relative">
+<img alt="Green Chilies" class="w-full h-full object-cover" data-alt="Vibrant fresh green chilies scattered, crisp and shiny skin, bright overhead studio light against white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4lVBqg4W_VipG6VYEuh_oCxuJSXK8wrMHHkZpsXdElLPFpS3Kl66P76UZL3MO29lFU2CFyWygVV-n25oYYFzRk2csc-Q8RPKvQ2GgPZ1kauRsKQgPUKoLUQV5938jHpWu5qyAuYIExL9GmNKvKQMA1spGrqWfW4QdLzfcXn8_y57um0DObKOMrfF0ruRz0lTHJLvHJJpLYK3p5HRmQJp5J_luBJOvI70vbxY_p2E5UNekMwxFyKkoiPQaaxRsJq7o2D-nO1pApNg"/>
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Green Chilli (Hari Mirch)</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant mb-2">100 g</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] text-on-surface">₹15</span>
+</div>
+<!-- Active Stepper State Example -->
+<div class="flex items-center bg-primary rounded-lg shadow-sm">
+<button class="w-7 h-7 flex items-center justify-center text-on-primary hover:bg-white/20 rounded-l-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-primary w-6 text-center">1</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-primary hover:bg-white/20 rounded-r-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white dark:bg-zinc-950 docked full-width bottom-0 rounded-t-2xl border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] fixed left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe md:hidden">
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-green-600 dark:text-green-500 font-bold bg-green-50 dark:bg-green-950/30 rounded-xl px-3 py-1 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Categories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200 relative">
+<div class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm">1</div>
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-400 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium">Account</span>
+</button>
+</nav>
+</body></html>

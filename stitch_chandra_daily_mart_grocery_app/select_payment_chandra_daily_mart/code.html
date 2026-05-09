@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Chandra Daily Mart - Payment Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#d2bbff",
+                        "on-background": "#1a1c1e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#321200",
+                        "on-secondary-fixed-variant": "#753400",
+                        "inverse-primary": "#66df73",
+                        "primary": "#006e24",
+                        "surface-dim": "#dadadc",
+                        "surface-tint": "#006e24",
+                        "surface-container-high": "#e8e8ea",
+                        "on-surface": "#1a1c1e",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f3f6",
+                        "outline-variant": "#bdcab8",
+                        "primary-container": "#38b44e",
+                        "tertiary-container": "#af88ff",
+                        "surface-variant": "#e2e2e5",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#592600",
+                        "on-surface-variant": "#3e4a3c",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9fc",
+                        "inverse-surface": "#2f3133",
+                        "secondary-container": "#fb7800",
+                        "tertiary-fixed": "#eaddff",
+                        "inverse-on-surface": "#f0f0f3",
+                        "background": "#f9f9fc",
+                        "on-primary-fixed": "#002106",
+                        "surface-container": "#eeeef0",
+                        "surface-container-highest": "#e2e2e5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#994700",
+                        "primary-fixed": "#82fc8c",
+                        "secondary-fixed": "#ffdbc8",
+                        "on-tertiary-container": "#440099",
+                        "outline": "#6e7b6b",
+                        "on-tertiary-fixed-variant": "#5a00c6",
+                        "on-primary-container": "#003f11",
+                        "tertiary": "#732ee4",
+                        "primary-fixed-dim": "#66df73",
+                        "on-primary-fixed-variant": "#005319",
+                        "surface": "#f9f9fc",
+                        "on-tertiary-fixed": "#25005a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.25rem",
+                        "stack-md": "1rem",
+                        "container-margin": "1rem",
+                        "stack-lg": "1.5rem",
+                        "gutter": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom styles to hide default radio buttons and create custom ones */
+        .custom-radio {
+            appearance: none;
+            background-color: transparent;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .custom-radio::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--radio-color, white);
+        }
+
+        .custom-radio:checked::before {
+            transform: scale(1);
+        }
+        
+        .radio-green {
+            color: #bdcab8; /* outline-variant */
+        }
+        .radio-green:checked {
+            color: #38b44e; /* primary-container */
+            --radio-color: #38b44e;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased pb-32">
+<!-- TopAppBar (Transactional - Semantic Shell Exclusion: Replaced with specific Top Bar) -->
+<header class="flex items-center justify-between px-4 h-16 w-full sticky top-0 z-50 bg-white shadow-sm transition-all">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-highest transition-colors active:scale-95 text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Select Payment Method</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container-highest transition-colors active:scale-95 text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">help</span>
+</button>
+</header>
+<main class="max-w-md mx-auto px-container-margin pt-stack-md flex flex-col gap-stack-lg">
+<!-- Amount Summary Card -->
+<section class="bg-primary-container text-on-primary-container rounded-xl p-4 shadow-[0_8px_16px_rgba(56,180,78,0.15)] flex justify-between items-center relative overflow-hidden">
+<!-- Decorative circle -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+<div class="absolute -left-4 -bottom-4 w-20 h-20 bg-white/10 rounded-full blur-lg"></div>
+<div class="z-10">
+<p class="font-label-sm text-label-sm text-on-primary-container/80 mb-1">Amount to Pay</p>
+<p class="font-headline-lg text-headline-lg">₹475.50</p>
+</div>
+<div class="z-10 text-right">
+<p class="font-label-sm text-label-sm text-on-primary-container/80 mb-1">View Details</p>
+<button class="p-1 rounded-full bg-white/20 hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">keyboard_arrow_down</span>
+</button>
+</div>
+</section>
+<!-- Payment Options Container -->
+<div class="flex flex-col gap-stack-md">
+<!-- UPI Section -->
+<section>
+<h2 class="font-label-lg text-label-lg text-on-surface-variant mb-stack-sm px-1">UPI Payments</h2>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-variant overflow-hidden">
+<!-- Google Pay -->
+<label class="flex items-center justify-between p-4 border-b border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<!-- Placeholder for GPay Icon - Using material icon as fallback if image fails -->
+<img alt="Google Pay" class="w-6 h-6 object-contain rounded" data-alt="Google Pay logo minimal vector graphic on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARseD_9MctJQ18LzxZmH5GYCGjJJhVx6edL8UTgrkDd9Z8B_x7quGLX4ftv-RT2oCR92QCTcYADAHE-a8hsnup_uguQdCzJLxrqopLqrcJcmh9aPdbDviFj_LKRfKNzb2VcFeBaUD7fRWcTw_6Q9z5FnZFloUQl998nf72Uas5uIzrqO5xqp41nzQC4taVdJY9tCEhB7qmMxXd7JpXWnxXCI3TjxpRGVli1uW3h6B2OuAercb--RTDzqIIlYoT68x3TR-sovSs00c"/>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">Google Pay</p>
+<p class="font-body-md text-body-md text-outline">user@okhdfcbank</p>
+</div>
+</div>
+<input checked="" class="custom-radio radio-green" name="payment_method" type="radio" value="gpay"/>
+</label>
+<!-- PhonePe -->
+<label class="flex items-center justify-between p-4 border-b border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<img alt="PhonePe" class="w-6 h-6 object-contain rounded" data-alt="PhonePe logo minimal vector graphic on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB6H7HpPLKrLsUJosVu_k9-jf9mGt8R-_oDrhay8hyK7BCVaD64DaDVGU7ZCkJquYz7k0gHV8Fp8k_zK5JU6DshZKehqSx-RPecPM5g3_a8vDOPYP0gj_1v6wIf_iqV3GgH_ASGYBC9xN2nUhJ26s4QDQ6TUabC7zdfxbcZU6rWMLeLIqHTbUTqqptKmOYDjBe47vdpjI-km8ZvfNSizEZVpnrCM0HRPg-PUrXDnXXUayzPRYV4fLf5TXlnFkjJkpIYFinIduvCFE"/>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">PhonePe</p>
+</div>
+</div>
+<input class="custom-radio radio-green" name="payment_method" type="radio" value="phonepe"/>
+</label>
+<!-- Add New UPI -->
+<button class="flex items-center gap-4 p-4 w-full text-left hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full border border-dashed border-outline-variant flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+<p class="font-body-lg text-body-lg text-primary-container font-medium">Add New UPI ID</p>
+</button>
+</div>
+</section>
+<!-- Cards Section -->
+<section>
+<h2 class="font-label-lg text-label-lg text-on-surface-variant mb-stack-sm px-1">Credit/Debit Cards</h2>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-variant overflow-hidden">
+<!-- Saved Card -->
+<label class="flex items-center justify-between p-4 border-b border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">credit_card</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">HDFC Bank Credit Card</p>
+<p class="font-body-md text-body-md text-outline">**** **** **** 4321</p>
+</div>
+</div>
+<input class="custom-radio radio-green" name="payment_method" type="radio" value="card_hdfc"/>
+</label>
+<!-- Add New Card -->
+<button class="flex items-center gap-4 p-4 w-full text-left hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-md border border-dashed border-outline-variant flex items-center justify-center shrink-0 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+<p class="font-body-lg text-body-lg text-primary-container font-medium">Add New Card</p>
+</button>
+</div>
+</section>
+<!-- Other Options Section -->
+<section>
+<h2 class="font-label-lg text-label-lg text-on-surface-variant mb-stack-sm px-1">Other Options</h2>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-variant overflow-hidden">
+<!-- Wallet -->
+<label class="flex items-center justify-between p-4 border-b border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">Chandra Wallet</p>
+<p class="font-body-md text-body-md text-outline">Balance: ₹150.00</p>
+</div>
+</div>
+<input class="custom-radio radio-green" name="payment_method" type="radio" value="wallet"/>
+</label>
+<!-- COD -->
+<label class="flex items-center justify-between p-4 cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">Cash on Delivery (COD)</p>
+</div>
+</div>
+<input class="custom-radio radio-green" name="payment_method" type="radio" value="cod"/>
+</label>
+</div>
+</section>
+<!-- Security Badge -->
+<div class="flex items-center justify-center gap-2 mt-4 text-outline mb-8">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+<p class="font-label-sm text-label-sm">100% Secure Payments powered by Razorpay</p>
+</div>
+</div>
+</main>
+<!-- Fixed Footer for Payment Action -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-surface-variant p-4 shadow-[0_-4px_16px_rgba(0,0,0,0.05)] z-40 pb-safe">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary-container text-on-primary-container font-label-lg text-label-lg py-4 rounded-xl shadow-[0_4px_12px_rgba(56,180,78,0.2)] hover:bg-primary-container/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Pay ₹475.50</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

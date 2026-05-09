@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chandra Daily Mart - Atta &amp; Dal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-primary": "#ffffff",
+                            "surface-container-highest": "#e2e2e5",
+                            "tertiary-fixed-dim": "#d2bbff",
+                            "on-primary-fixed-variant": "#005319",
+                            "surface-variant": "#e2e2e5",
+                            "secondary-fixed": "#ffdbc8",
+                            "on-surface-variant": "#3e4a3c",
+                            "surface-container-low": "#f3f3f6",
+                            "surface": "#f9f9fc",
+                            "on-secondary": "#ffffff",
+                            "secondary-fixed-dim": "#ffb68b",
+                            "on-tertiary-container": "#440099",
+                            "on-error-container": "#93000a",
+                            "inverse-primary": "#66df73",
+                            "surface-container-lowest": "#ffffff",
+                            "tertiary": "#732ee4",
+                            "surface-dim": "#dadadc",
+                            "on-primary-container": "#003f11",
+                            "on-tertiary-fixed": "#25005a",
+                            "on-surface": "#1a1c1e",
+                            "on-secondary-container": "#592600",
+                            "surface-bright": "#f9f9fc",
+                            "on-error": "#ffffff",
+                            "on-tertiary-fixed-variant": "#5a00c6",
+                            "inverse-on-surface": "#f0f0f3",
+                            "background": "#f9f9fc",
+                            "primary-fixed-dim": "#66df73",
+                            "surface-tint": "#006e24",
+                            "on-primary-fixed": "#002106",
+                            "error": "#ba1a1a",
+                            "on-secondary-fixed-variant": "#753400",
+                            "tertiary-fixed": "#eaddff",
+                            "on-tertiary": "#ffffff",
+                            "tertiary-container": "#af88ff",
+                            "outline": "#6e7b6b",
+                            "on-secondary-fixed": "#321200",
+                            "surface-container": "#eeeef0",
+                            "on-background": "#1a1c1e",
+                            "surface-container-high": "#e8e8ea",
+                            "primary-fixed": "#82fc8c",
+                            "error-container": "#ffdad6",
+                            "primary": "#006e24",
+                            "primary-container": "#38b44e",
+                            "secondary-container": "#fb7800",
+                            "outline-variant": "#bdcab8",
+                            "secondary": "#994700",
+                            "inverse-surface": "#2f3133"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "stack-lg": "1.5rem",
+                            "stack-sm": "0.25rem",
+                            "gutter": "0.75rem",
+                            "stack-md": "1rem",
+                            "container-margin": "1rem"
+                    },
+                    "fontFamily": {
+                            "body-lg": ["Be Vietnam Pro"],
+                            "body-md": ["Be Vietnam Pro"],
+                            "label-lg": ["Be Vietnam Pro"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "headline-sm": ["Plus Jakarta Sans"],
+                            "label-sm": ["Be Vietnam Pro"],
+                            "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pt-16 pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800 shadow-sm">
+<button class="active:scale-95 transition-transform hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-full p-2 text-green-600 dark:text-green-500 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-green-600 dark:text-green-500">Shop Categories</h1>
+<button class="active:scale-95 transition-transform hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-full p-2 text-green-600 dark:text-green-500 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<main class="px-container-margin pt-4">
+<!-- Location Header -->
+<div class="flex items-center gap-3 py-3 border-b border-surface-variant mb-6">
+<div class="bg-primary/10 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1 cursor-pointer">
+<span class="font-label-lg text-label-lg text-on-surface">Delivering to Vinay Nagar</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Faridabad, Haryana</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Atta, Rice &amp; Dal</h2>
+<!-- Category Chips -->
+<div class="flex overflow-x-auto gap-2 pb-6 no-scrollbar -mx-container-margin px-container-margin">
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg whitespace-nowrap shadow-sm border border-primary-container">All Items</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg whitespace-nowrap border border-outline-variant hover:bg-surface-container-low transition-colors">Atta &amp; Flours</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg whitespace-nowrap border border-outline-variant hover:bg-surface-container-low transition-colors">Dals &amp; Pulses</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg whitespace-nowrap border border-outline-variant hover:bg-surface-container-low transition-colors">Rice</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col relative group">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm text-[10px] px-2 py-0.5 rounded-full z-10 shadow-sm">Bestseller</div>
+<div class="w-full aspect-square bg-surface-container-low rounded-lg mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply p-2" data-alt="High quality package of premium Aashirvaad whole wheat atta flour on a clean bright surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5sbH-YXIb-y3iBca61z57WuDiTVJFJcF-nkFALnnS0KO4o00KrU0oxwUcbqQ1mOvxReQZqiAkUPSsbhkSlSHgGC2oNdX-VElS99-14dpCH0UijfVH2j19M30Aql9icKcVqTBVhJl4GlxeTncgmSiFAWDl6fEFLizR8o6gMchuEQ-hZaxjRhVTv0mP7juz3VM0Rhyp6mAamT55ZMQkbe8O7lsZD0kUE2rzfYoSRtRobP4eOVjyvVgfmFgAcK_q-mn05QGE4DSodcQ"/>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1 leading-snug">Aashirvaad Shudh Chakki Atta</h3>
+<span class="font-body-md text-label-sm text-outline mb-3 block">5 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹240</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹265</span>
+</div>
+<button class="bg-surface-container-lowest text-primary font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col relative group">
+<div class="w-full aspect-square bg-surface-container-low rounded-lg mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply p-2" data-alt="Close up of high quality yellow Moong Dal in a rustic wooden bowl on a light surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh5RNCeQO-PGqBQYK3FPki3ngC1ycjPmsUfdX7xMHCef4qinf0TSPfuDtJhtivrhAM2eAf3B4YELpnnBWdO7bXy_GLNo92K7adR71m-4DCVsGtLwcwmdGbuteDwsqhsn3AF_K0C5WxVYlIZd49OC_m9OqyvrKYaH0-OOm0QiWR8bbP5qEOIJtjI9AUa-bDnsk34Xi_7rPEjtU8jL0H323yE13bvK57qrzKFtBPDgsTTx1DbRArRVRwLptmPpfAYZqeIU8O3rdC0Mc"/>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1 leading-snug">Tata Sampann Unpolished Moong Dal</h3>
+<span class="font-body-md text-label-sm text-outline mb-3 block">1 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹165</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹180</span>
+</div>
+<button class="bg-surface-container-lowest text-primary font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col relative group">
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-label-sm text-[10px] px-2 py-0.5 rounded-full z-10 shadow-sm">Organic</div>
+<div class="w-full aspect-square bg-surface-container-low rounded-lg mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply p-2" data-alt="Premium organic Chana Dal split chickpeas scattered on a clean white kitchen counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBefQruoBPf79GXx8h7MR3pOeC2EOC9z5IAD1nSr1wUJLila5Vy2Q5J4mph8HzjklpPYeTEGtAaOM9-bYd5NI1-y_vLD_acxq0QB_k4D8kqupKZW4r-V9csBpzmKoXDIn7SXXndRC2ogAwENAMSJAvpbb8YO4hGyiDmFVBlCxxT9eRxa0eisvaxSc67Wwfz1lYdP7pxUWTK-GnLHJcr7yyILiD2vKRBpD6X-sj7bzg2jFinffOtPX9PY6VVQHgPyjlUmoa8Z8tw0wk"/>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1 leading-snug">Organic Tattva Chana Dal</h3>
+<span class="font-body-md text-label-sm text-outline mb-3 block">1 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹145</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹160</span>
+</div>
+<button class="bg-surface-container-lowest text-primary font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col relative group">
+<div class="w-full aspect-square bg-surface-container-low rounded-lg mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply p-2" data-alt="A bowl of rich yellow Toor Dal pigeon peas with natural bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjGBQbNh9R6mqZIuitrtUQb8VduJR71ULUBuxYhOMzJ4rASqvD8euUkEt7U788TtblIyototMRndbvRlI3kJbRutizAdrvlA6A6XQOpLcTmI7o75WMCYv7OMyyfOspiJCt8AAN6JzBa_KsV_OghwJ1S5k61773stgikDvdxIRfVCKTv_nGXW4Ya83MJDib2jP_lqiBuPZsTCUqCoS3svgrTzjX4A8jfPYmtkBL4drMDObWr70cNLRqxUXgXqYeSRO6tNEdcUVUgbo"/>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1 leading-snug">Premium Unpolished Toor Dal</h3>
+<span class="font-body-md text-label-sm text-outline mb-3 block">1 kg</span>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">₹185</span>
+<span class="font-body-md text-[11px] text-outline line-through">₹205</span>
+</div>
+<button class="bg-surface-container-lowest text-primary font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col relative group col-span-2">
+<div class="flex gap-4">
+<div class="w-32 h-32 bg-surface-container-low rounded-lg overflow-hidden relative flex-shrink-0">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm text-[10px] px-2 py-0.5 rounded-full z-10 shadow-sm">Sale</div>
+<img class="w-full h-full object-cover mix-blend-multiply p-2" data-alt="Long grain aged premium Basmati rice spilling gracefully from a burlap sack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB03c9eYF7aWBeJz01hAEHbwvNQpdx3GgpHl5wvuwqB1EUxz1wQaK6KQ20bqjnhHmp1Ii1tIPE94mAX36SAJgbPTLqcuoLoEMGLc5MIeq0eJDKJ6c9rObjNoFS-1-Xn7tC6r9JMMG1bLpXX5sz24vSlKGz3ZLMq0GQ0SWvEpm7v7IULJr_g4LJ8KIHp_8LloELO34TlutSngeEixiBFe9zmS1smTkNUmMS4DjKrn_AlWLHEWIv0E6ODwf_D2eKtDimSBsP9qb-YA_w"/>
+</div>
+<div class="flex flex-col flex-1 justify-between py-1">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 mb-1">Daawat Rozana Super Basmati Rice</h3>
+<span class="font-body-md text-label-sm text-outline block">5 kg • Aged 1 Year</span>
+</div>
+<div class="flex items-end justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹450</span>
+<span class="font-body-md text-[12px] text-outline line-through">₹550</span>
+</div>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-2 rounded-lg border border-primary hover:bg-primary-container transition-colors shadow-md">ADD</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<!-- Home (Inactive) -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-300 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold mt-1">Home</span>
+</button>
+<!-- Categories (Active) -->
+<button class="flex flex-col items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 rounded-xl px-3 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="grid_view" data-weight="fill" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold mt-1">Categories</span>
+</button>
+<!-- Quick Buy (Inactive) -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-300 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold mt-1">Quick Buy</span>
+</button>
+<!-- Account (Inactive) -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-green-500 dark:hover:text-green-300 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold mt-1">Account</span>
+</button>
+</nav>
+</body></html>

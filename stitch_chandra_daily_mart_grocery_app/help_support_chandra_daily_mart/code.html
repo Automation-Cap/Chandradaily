@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Help &amp; Support - Chandra Daily Mart</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#eeeef0",
+                "surface-container-highest": "#e2e2e5",
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#f0f0f3",
+                "background": "#f9f9fc",
+                "on-primary-fixed": "#002106",
+                "secondary": "#994700",
+                "secondary-fixed-dim": "#ffb68b",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#82fc8c",
+                "secondary-fixed": "#ffdbc8",
+                "on-tertiary-container": "#440099",
+                "tertiary": "#732ee4",
+                "primary-fixed-dim": "#66df73",
+                "on-primary-fixed-variant": "#005319",
+                "surface": "#f9f9fc",
+                "on-tertiary-fixed": "#25005a",
+                "outline": "#6e7b6b",
+                "on-tertiary-fixed-variant": "#5a00c6",
+                "on-primary-container": "#003f11",
+                "on-secondary-fixed-variant": "#753400",
+                "inverse-primary": "#66df73",
+                "tertiary-fixed-dim": "#d2bbff",
+                "on-background": "#1a1c1e",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed": "#321200",
+                "surface-container-low": "#f3f3f6",
+                "outline-variant": "#bdcab8",
+                "primary-container": "#38b44e",
+                "primary": "#006e24",
+                "surface-dim": "#dadadc",
+                "surface-tint": "#006e24",
+                "surface-container-high": "#e8e8ea",
+                "on-surface": "#1a1c1e",
+                "on-primary": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-secondary-container": "#592600",
+                "on-surface-variant": "#3e4a3c",
+                "error": "#ba1a1a",
+                "tertiary-container": "#af88ff",
+                "surface-variant": "#e2e2e5",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#eaddff",
+                "surface-bright": "#f9f9fc",
+                "inverse-surface": "#2f3133",
+                "secondary-container": "#fb7800"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-md": "1rem",
+                "stack-lg": "1.5rem",
+                "gutter": "0.75rem",
+                "container-margin": "1rem",
+                "stack-sm": "0.25rem"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "label-lg": [
+                        "Be Vietnam Pro"
+                ],
+                "headline-sm": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-sm": [
+                        "Be Vietnam Pro"
+                ],
+                "headline-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Be Vietnam Pro"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "18px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #f9f9fc; /* bg-background */
+    color: #1a1c1e; /* text-on-background */
+  }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased font-body-md text-body-md pb-24">
+<!-- TopAppBar Component (from JSON) -->
+<header class="bg-white dark:bg-gray-950 docked full-width top-0 sticky border-b border-gray-100 dark:border-gray-800 shadow-sm flex items-center justify-between px-4 h-16 w-full z-50">
+<button class="text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors active:scale-95 duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-on-surface">Help &amp; Support</h1>
+<button class="text-green-600 dark:text-green-500 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors active:scale-95 duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="contact_support" data-weight="fill" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+</button>
+</header>
+<main class="max-w-md mx-auto w-full flex flex-col gap-stack-lg p-container-margin pt-6">
+<!-- Search Section -->
+<section class="flex flex-col gap-stack-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">How can we help you today?</h2>
+<div class="relative w-full mt-2">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface rounded-xl py-3.5 pl-11 pr-4 shadow-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md placeholder:text-on-surface-variant/60" placeholder="Search for help topics..." type="text"/>
+</div>
+</section>
+<!-- Categories Section (Bento Grid Style) -->
+<section class="flex flex-col gap-stack-md">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Quick Topics</h3>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Category Card -->
+<a class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container flex flex-col items-start gap-3 hover:border-primary/30 transition-colors active:scale-[0.98]" href="#">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_mall</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">My Orders</span>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container flex flex-col items-start gap-3 hover:border-primary/30 transition-colors active:scale-[0.98]" href="#">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Payments &amp; Refunds</span>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container flex flex-col items-start gap-3 hover:border-primary/30 transition-colors active:scale-[0.98]" href="#">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Chandra Daily Mart Wallet</span>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container flex flex-col items-start gap-3 hover:border-primary/30 transition-colors active:scale-[0.98]" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">manage_accounts</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Account Settings</span>
+</a>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="flex flex-col gap-stack-md mt-2">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Frequently Asked Questions</h3>
+<div class="flex flex-col gap-2">
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container overflow-hidden">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left active:bg-surface-container-low transition-colors">
+<span class="font-label-lg text-label-lg text-on-surface">Where is my order?</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container overflow-hidden">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left active:bg-surface-container-low transition-colors">
+<span class="font-label-lg text-label-lg text-on-surface">How to cancel my order?</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+<!-- FAQ Item -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-surface-container overflow-hidden">
+<button class="w-full px-4 py-4 flex items-center justify-between text-left active:bg-surface-container-low transition-colors">
+<span class="font-label-lg text-label-lg text-on-surface">Refund timeline &amp; process</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+</div>
+<button class="text-primary font-label-lg text-label-lg py-2 text-center w-full mt-2 hover:bg-primary/5 rounded-lg transition-colors">
+      View all FAQs
+    </button>
+</section>
+<!-- Direct Contact Section (Glassmorphism inspired card) -->
+<section class="bg-primary-container text-on-primary-container rounded-2xl p-6 mt-4 relative overflow-hidden shadow-md">
+<!-- Decorative background elements -->
+<div class="absolute -right-6 -top-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-6 -bottom-6 w-24 h-24 bg-on-primary/20 rounded-full blur-xl"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-on-primary rounded-full flex items-center justify-center shadow-sm text-primary">
+<span class="material-symbols-outlined text-[28px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm">Still need help?</h3>
+<p class="font-body-sm text-body-sm opacity-90">Our support team is here 24/7</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 mt-2">
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-3.5 rounded-xl shadow-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+          Chat with us
+        </button>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface-container-lowest/80 backdrop-blur-sm text-on-primary-container font-label-lg text-label-lg py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 active:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+            Call
+          </button>
+<button class="flex-1 bg-surface-container-lowest/80 backdrop-blur-sm text-on-primary-container font-label-lg text-label-lg py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 active:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+            Email
+          </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Component (from JSON) -->
+<nav class="docked full-width bottom-0 fixed rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-gray-100 dark:border-gray-800 fixed bottom-0 w-full z-50 flex justify-around items-center px-2 py-3 bg-white dark:bg-gray-900 md:hidden">
+<!-- Inactive Item: Home -->
+<button class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 py-1.5 hover:text-green-500 dark:hover:text-green-300 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold">Home</span>
+</button>
+<!-- Inactive Item: Categories -->
+<button class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 py-1.5 hover:text-green-500 dark:hover:text-green-300 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold">Categories</span>
+</button>
+<!-- Inactive Item: Orders -->
+<button class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 py-1.5 hover:text-green-500 dark:hover:text-green-300 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold">Orders</span>
+</button>
+<!-- Active Item: Support -->
+<button class="flex flex-col items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 rounded-xl py-1.5 px-4 transition-all active:scale-90 duration-200 w-20">
+<span class="material-symbols-outlined mb-1" data-icon="help_center" data-weight="fill" style="font-variation-settings: 'FILL' 1;">help_center</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold">Support</span>
+</button>
+</nav>
+</body></html>

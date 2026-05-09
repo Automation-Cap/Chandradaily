@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chandra Daily Mart - Snacks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#321200",
+                      "tertiary": "#732ee4",
+                      "primary-fixed-dim": "#66df73",
+                      "on-primary-fixed": "#002106",
+                      "on-primary-container": "#003f11",
+                      "on-background": "#1a1c1e",
+                      "surface-container-low": "#f3f3f6",
+                      "surface-bright": "#f9f9fc",
+                      "on-primary-fixed-variant": "#005319",
+                      "tertiary-fixed-dim": "#d2bbff",
+                      "tertiary-fixed": "#eaddff",
+                      "tertiary-container": "#af88ff",
+                      "surface-tint": "#006e24",
+                      "inverse-surface": "#2f3133",
+                      "background": "#f9f9fc",
+                      "on-surface": "#1a1c1e",
+                      "surface-container-high": "#e8e8ea",
+                      "on-tertiary-fixed-variant": "#5a00c6",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#592600",
+                      "primary": "#006e24",
+                      "on-tertiary-fixed": "#25005a",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#82fc8c",
+                      "surface-container-highest": "#e2e2e5",
+                      "secondary-fixed": "#ffdbc8",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f9f9fc",
+                      "on-tertiary-container": "#440099",
+                      "inverse-primary": "#66df73",
+                      "surface-dim": "#dadadc",
+                      "secondary-container": "#fb7800",
+                      "outline": "#6e7b6b",
+                      "inverse-on-surface": "#f0f0f3",
+                      "secondary": "#994700",
+                      "surface-container": "#eeeef0",
+                      "on-secondary-fixed-variant": "#753400",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "primary-container": "#38b44e",
+                      "outline-variant": "#bdcab8",
+                      "surface-variant": "#e2e2e5",
+                      "on-surface-variant": "#3e4a3c",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "1.5rem",
+                      "stack-md": "1rem",
+                      "stack-sm": "0.25rem",
+                      "container-margin": "1rem",
+                      "gutter": "0.75rem"
+              },
+              "fontFamily": {
+                      "label-lg": ["Be Vietnam Pro"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-sm": ["Plus Jakarta Sans"],
+                      "body-md": ["Be Vietnam Pro"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Be Vietnam Pro"],
+                      "body-lg": ["Be Vietnam Pro"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen pb-[90px] pt-[70px]">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 shadow-sm transition-colors opacity-100 duration-150">
+<div class="flex items-center gap-2">
+<button aria-label="Go back" class="active:scale-95 transition-transform p-2 -ml-2 text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-on-surface">Snacks &amp; Biscuits</h1>
+</div>
+<button aria-label="Search" class="active:scale-95 transition-transform p-2 -mr-2 text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</header>
+<!-- Main Canvas Content -->
+<main class="max-w-[768px] mx-auto w-full px-container-margin overflow-x-hidden flex flex-col gap-stack-lg">
+<!-- Vibe Banner -->
+<section class="mt-stack-sm">
+<div class="h-[140px] rounded-xl overflow-hidden relative shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex items-center px-6 bg-gradient-to-br from-secondary-container to-secondary text-on-secondary-container">
+<div class="z-10 w-2/3">
+<h3 class="font-headline-sm text-headline-sm mb-1 text-white">Snack Time Savers!</h3>
+<p class="font-label-sm text-label-sm text-white/90 mb-3">Up to 20% Off</p>
+<button class="bg-white text-secondary font-label-lg text-label-lg px-4 py-1.5 rounded-full hover:bg-surface-container transition-colors shadow-sm">Shop Now</button>
+</div>
+<img alt="Snacks Offer" class="absolute right-[-20px] top-0 h-full w-[160px] object-cover opacity-90 mix-blend-multiply rounded-r-xl" data-alt="flying crispy potato chips against a bright warm background, dynamic action shot, vivid colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO57wr7bUnYpkpHXxgw4dGFBVBps_T8Ku-GhNjEBmiq0xG2IWsGSvD9Z28EVkT8Ym5RDkiNo5eAahg9Kg1VbObfVeKBCwK-m4V4r8jExlbiNw2tiiP_DG3uaADWkXTKK6I2BRLObZgQVBxHX5kf2GkSsvrB_jQK3a3hVnWBPBfiGq1G8EGZWpTpp9nzdPyxJfUQP7Q9zCOHzghcPfdBz1EfSdFBawq9s8wdsfgP7ySr4qlMoMdRq78sRxyVdRgEuHwQAGprbMkOmQ"/>
+</div>
+</section>
+<!-- Category Horizontal Scroll -->
+<section class="w-[calc(100%+2rem)] -ml-4 pl-4 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-2">
+<div class="flex gap-2 w-max pr-4">
+<button class="snap-start shrink-0 bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-2 rounded-full border border-primary shadow-sm">All Snacks</button>
+<button class="snap-start shrink-0 bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg px-4 py-2 rounded-full border border-surface-variant hover:bg-surface-container-low transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.02)]">Namkeen</button>
+<button class="snap-start shrink-0 bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg px-4 py-2 rounded-full border border-surface-variant hover:bg-surface-container-low transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.02)]">Chips</button>
+<button class="snap-start shrink-0 bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg px-4 py-2 rounded-full border border-surface-variant hover:bg-surface-container-low transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.02)]">Biscuits</button>
+<button class="snap-start shrink-0 bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg px-4 py-2 rounded-full border border-surface-variant hover:bg-surface-container-low transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.02)]">Chocolates</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section>
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Product 1: Bhujia -->
+<article class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary font-label-sm text-[10px] px-2 py-0.5 rounded-full z-10">Bestseller</div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Haldiram's Bhujia" class="w-full h-full object-cover" data-alt="close-up of a bowl of spicy Indian namkeen bhujia, vibrant warm lighting, crisp details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgwJHf2Of1hlGJ55hjUkYbaVcg0eog2GE11JZ85IISKLOYPerxTLDhw3teP4VjmKp7CcxPBV7vOd7nBmVXuMERYMUeD2xgRcNKh5P3pOkKp_KNn5QR0MYD7fJEWByRFKDj_7R8u45PWEoIwAde52hpl8pqzPeZWiHCluoiW3vMFjc_sHK2ZVdwYLzSxX6JTN1ntq_qSoIAsU60HuMD5OFWnUAfn3LGO-o6slXk9AvJDuhUngAkx3KN2ayw0Mir3cWszCDiYeqnfEQ"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Haldiram's</span>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Bhujia Sev Authentic Namkeen</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant">400 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹99</span>
+<span class="font-label-sm text-[10px] text-outline line-through">₹110</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</article>
+<!-- Product 2: Lays -->
+<article class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Lays Chips" class="w-full h-full object-cover" data-alt="crispy golden potato chips spilling from a bright blue packet, studio lighting, highly saturated colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYur6v81uN4usztMMdjvQYF5T1lI9qY7Tth6MBHG0TwAApTOzGl3zdn-ZzVLuntHBVcM8-GkQXgTPmPPnAmi-hNR7XJxcTM2EPAoXSxDRoRJ9lo-mOg0T1fI4Dquh1AsPXfmMbUb30ZQqQtoPfnr_Qq6Bc-5fw2ROhSQR9LGWylsoveXCFb2rVUEi54u6S_Oghp_zEvK-sQyYt71Z3NTlzL-3T8q0knJogkZStYFVDFbsy9HKOwUGPX9Yj6zYTLiKDZyOxHydbui8"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Lay's</span>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">India's Magic Masala Chips</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant">50 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹20</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</article>
+<!-- Product 3: Kurkure -->
+<article class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Kurkure" class="w-full h-full object-cover" data-alt="spicy crunchy corn puffs in a bright orange bowl, vibrant warm colors, energetic food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCpacvH_hkFwcpx4XW4GC9lCtf0c7WKmF3cgYWbLRS8G27BHO1zIJA6O_iDeHz0KQnhx91g7m1-Fn37PfPzPDkMo8_1aP_HSroJBH463xKzbEVI5fR5EfUECeXWmqYtFWBX1ikVaWzmCQfEYPaSb6eSPi6wIJyO3xZN55qb_6cDa8ZMmY9CIGmTcz-77cOU5tb9j8eTmWSmj0lKnVmpGby_BDpoi0eLz3sguvtzP5ur0YikAoFpq8ETOlHsbawGdUZKCE5jX-Cvco"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Kurkure</span>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Masala Munch Crunchy Snack</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant">90 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹28</span>
+<span class="font-label-sm text-[10px] text-outline line-through">₹30</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</article>
+<!-- Product 4: Biscuits -->
+<article class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Biscuits" class="w-full h-full object-cover" data-alt="stack of golden brown textured sweet biscuits, warm morning lighting, rustic wooden table background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_KYeqG9YdJcC0miuOfiJSFbM6_LvriAV7WMu5EmS7jf-c5ale5KgcAri1nYAXZheTD0LF0sS0i_Q4w3JK3oWKKHC_jFQM8CsZQNTCvJHqHV0sZtdc-WVkHGRsrp-FPQ0sJ_743t1-x5ln_-T2mg8xWlmnrmo0ZrpMnyYIKKpzv_YivM2n6RFKKYF-vsXtnR1D3wOWO__jIpO7U6n-WWZoFygiZF_KfOAdYdKi0mw_l56mC9vv2bysQ39yAMv-v_vvcklNtN74K4"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Britannia</span>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Good Day Cashew Cookies</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant">250 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹50</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</article>
+<!-- Product 5: Chocolate -->
+<article class="bg-surface-container-lowest rounded-xl p-3 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-2 relative">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-[10px] px-2 py-0.5 rounded-full z-10">Hot Deal</div>
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Chocolate" class="w-full h-full object-cover" data-alt="chunks of rich glossy milk chocolate stacked together, dark indulgent background with a warm spotlight highlighting texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_2KnjMZcF3ZSM2K-sCux71fQLqo6Xin3x9Gk27-KaEJzU7Etz1rq8DT3TAwQewNBPQp2VFCdQ7psUdpn2qNKhsOQoZCP0B-y3WDODI0Wii5CTe9rr9u81pOQ-PDA7ms3JSUZhH5GimgqSzsg8jkoOlG_lhyWGJNeb9BhJRvl0VMBhBtQdFybzn_PpItgmG76PpSOEMA8z_6bsw6Z2jfaoLIq4XWyLACz4fjEKLxZkbTRWNZM_I3prg6PQJy5nVh1Zxb_hq2k2_0o"/>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-1 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Cadbury</span>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Dairy Milk Silk Smooth</h3>
+<span class="font-body-md text-[12px] text-on-surface-variant">150 g</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹155</span>
+<span class="font-label-sm text-[10px] text-outline line-through">₹180</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-4 py-1.5 rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm">ADD</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- BottomNavBar from JSON (Semantic Active Tab: Categories) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white/90 dark:bg-slate-950/90 backdrop-blur-md px-2 py-3 rounded-t-xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-green-600 dark:text-green-500 bg-green-50 dark:bg-green-950/50 rounded-xl px-3 py-1 cursor-pointer scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">bolt</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Quick Buy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-green-500 dark:hover:text-green-400 cursor-pointer transition-colors px-3 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium mt-0.5">Account</span>
+</a>
+</nav>
+</body></html>

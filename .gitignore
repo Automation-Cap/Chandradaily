@@ -2,7 +2,7 @@ node_modules/
 dist/
 .DS_Store
 *.local
-ganesha-mart-app/node_modules/
-ganesha-mart-app/dist/
+chandra-daily-mart-app/node_modules/
+chandra-daily-mart-app/dist/
 .env
 .env.local
