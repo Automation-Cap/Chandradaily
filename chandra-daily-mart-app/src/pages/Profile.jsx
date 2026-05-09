@@ -141,91 +141,9 @@ export default function Profile() {
   }
 
   return (
-    <div className="page fade-in" style={{ background: 'var(--surface-low)', paddingBottom: 110 }}>
-      {/* Premium Header */}
-      <div className="top-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px' }}>
-        <div>
-          <h1 style={{ fontSize: 24, fontWeight: 900, color: 'var(--on-surface)', letterSpacing: '-0.5px' }}>Account</h1>
-          <p style={{ fontSize: 12, color: 'var(--outline)', fontWeight: 600 }}>Welcome back, {displayName.split(' ')[0]}</p>
-        </div>
-        {isAdmin && (
-          <div style={{
-            background: 'linear-gradient(135deg, #006e24, #1e3a8a)',
-            color: '#fff', borderRadius: 12, padding: '6px 12px', fontSize: 11, fontWeight: 800,
-            boxShadow: '0 4px 12px rgba(0,110,36,0.2)',
-          }}>ADMIN</div>
-        )}
-      </div>
-
-      {/* ── User Brief Card ── */}
-      <div style={{ padding: '12px 16px 20px' }}>
-        <div style={{
-          background: 'var(--surface-lowest)', borderRadius: 24,
-          padding: '20px', display: 'flex', alignItems: 'center', gap: 16,
-          boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
-        }}>
-          <div style={{
-            width: 64, height: 64, borderRadius: 22,
-            background: 'linear-gradient(135deg, var(--primary), #38b44e)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontSize: 28, fontWeight: 900,
-            boxShadow: '0 8px 16px rgba(0,110,36,0.2)',
-          }}>
-            {initial}
-          </div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <p style={{ fontSize: 19, fontWeight: 850, color: 'var(--on-surface)', marginBottom: 4 }}>{displayName}</p>
-            <p style={{ fontSize: 13, color: 'var(--outline)', fontWeight: 500 }}>{phoneDisplay}</p>
-          </div>
-          <button onClick={() => navigate('/profile/edit')} style={{
-            width: 40, height: 40, borderRadius: 14, background: 'var(--surface-low)',
-            border: 'none', color: 'var(--primary)', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>
-            <Icon d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z" size={18} />
-          </button>
-        </div>
-      </div>
-
-      {/* ── Wallet ── */}
+    <div className="page fade-in" style={{ background: 'var(--surface-low)', paddingBottom: 110, paddingTop: 20 }}>
+      {/* ── Wallet Card at Top ── */}
       <WalletCard balance={profile?.wallet_balance || 0} />
-
-      {/* ── Action Buttons ── */}
-      <div style={{ padding: '0 16px 24px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-          <button 
-            onClick={() => navigate('/schedule-delivery')}
-            style={{
-              background: '#f3f0ff', border: 'none', borderRadius: 20, padding: '20px 16px',
-              display: 'flex', flexDirection: 'column', gap: 8, cursor: 'pointer', transition: 'transform 0.2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
-            onMouseLeave={e => e.currentTarget.style.transform = 'none'}
-          >
-            <div style={{ width: 44, height: 44, borderRadius: 14, background: '#7c3aed', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, color: '#fff' }}>📅</div>
-            <div style={{ textAlign: 'left' }}>
-              <p style={{ fontSize: 14, fontWeight: 800, color: '#4c1d95' }}>Schedules</p>
-              <p style={{ fontSize: 11, color: '#7c3aed', opacity: 0.8 }}>Daily Essentials</p>
-            </div>
-          </button>
-
-          <button 
-            onClick={() => navigate('/wishlist')}
-            style={{
-              background: '#fff1f2', border: 'none', borderRadius: 20, padding: '20px 16px',
-              display: 'flex', flexDirection: 'column', gap: 8, cursor: 'pointer', transition: 'transform 0.2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
-            onMouseLeave={e => e.currentTarget.style.transform = 'none'}
-          >
-            <div style={{ width: 44, height: 44, borderRadius: 14, background: '#e11d48', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, color: '#fff' }}>❤️</div>
-            <div style={{ textAlign: 'left' }}>
-              <p style={{ fontSize: 14, fontWeight: 800, color: '#881337' }}>Wishlist</p>
-              <p style={{ fontSize: 11, color: '#e11d48', opacity: 0.8 }}>Saved Items</p>
-            </div>
-          </button>
-        </div>
-      </div>
 
       {/* ── User Information (Profile Section) ── */}
       <div style={{ padding: '0 16px 20px' }}>
@@ -239,6 +157,26 @@ export default function Profile() {
             onClick={() => navigate('/profile/edit')}
           />
           <div style={{ height: 1, background: 'var(--surface-container)', margin: '0 16px' }} />
+          
+          {/* Moved Schedules and Wishlist here as MenuItems */}
+          <MenuItem
+            icon="📅"
+            iconBg="#f3f0ff" iconColor="#7c3aed"
+            label="Schedules"
+            sublabel="Daily Essentials"
+            onClick={() => navigate('/schedule-delivery')}
+          />
+          <div style={{ height: 1, background: 'var(--surface-container)', margin: '0 16px' }} />
+          
+          <MenuItem
+            icon="❤️"
+            iconBg="#fff1f2" iconColor="#e11d48"
+            label="Wishlist"
+            sublabel="Saved Items"
+            onClick={() => navigate('/wishlist')}
+          />
+          <div style={{ height: 1, background: 'var(--surface-container)', margin: '0 16px' }} />
+
           <MenuItem
             icon={<Icon d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" />}
             iconBg="#ecfdf5" iconColor="#059669"
