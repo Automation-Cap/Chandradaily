@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 export default function BottomNav() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { isAdmin } = useAuth();
+  const { isAdmin, loading } = useAuth();
 
   const navs = [
     { id: 'home', path: '/', label: 'Home', icon: <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /> },
@@ -13,12 +13,12 @@ export default function BottomNav() {
     { id: 'orders', path: '/orders', label: 'Orders', icon: <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M16 13H8 M16 17H8 M10 9H8" /> },
     { 
       id: 'profile', 
-      path: isAdmin ? '/admin' : '/profile', 
-      label: isAdmin ? 'Admin' : 'Account', 
-      icon: isAdmin ? (
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 8v4m0 4h.01" />
-      ) : (
+      path: loading ? '/profile' : (isAdmin ? '/admin' : '/profile'), 
+      label: loading ? 'Account' : (isAdmin ? 'Admin' : 'Account'), 
+      icon: (loading || !isAdmin) ? (
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2 M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+      ) : (
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 8v4m0 4h.01" />
       ) 
     },
   ];

@@ -5,7 +5,7 @@ import { useStore } from '../contexts/StoreContext';
 
 export default function TopHeader() {
   const navigate = useNavigate();
-  const { user, profile, isAdmin } = useAuth();
+  const { user, profile, isAdmin, loading } = useAuth();
   const { isOpen } = useStore();
   const [locationStr, setLocationStr] = useState('Fetching location...');
 
@@ -68,7 +68,9 @@ export default function TopHeader() {
         </div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-        {!user ? (
+        {loading ? (
+          <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--surface-container-low)', animation: 'pulse 1.5s infinite ease-in-out' }} />
+        ) : !user ? (
           <button onClick={() => navigate('/login')} style={{ background: 'var(--surface-container)', border: 'none', borderRadius: 20, padding: '6px 14px', fontSize: 12, fontWeight: 700, color: 'var(--primary)', cursor: 'pointer' }}>
             Login
           </button>
@@ -79,5 +81,6 @@ export default function TopHeader() {
         )}
       </div>
     </div>
+
   );
 }
