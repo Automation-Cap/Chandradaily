@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useStore } from '../contexts/StoreContext';
+import toast from 'react-hot-toast';
 
 export default function TopHeader() {
   const navigate = useNavigate();
@@ -9,8 +10,9 @@ export default function TopHeader() {
   const { isOpen } = useStore();
   const [locationStr, setLocationStr] = useState('Fetching location...');
 
-  useEffect(() => {
+  const fetchLocation = useCallback(async () => {
     if ('geolocation' in navigator) {
+      setLocationStr('Locating...');
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           try {
@@ -22,6 +24,7 @@ export default function TopHeader() {
             const area = data.address.suburb || data.address.neighbourhood || data.address.residential || 'Vinay Nagar';
             
             setLocationStr(`${area}, ${city}`);
+            if (window.location.pathname === '/') toast.success(`Location set to ${area}`);
           } catch (err) {
             setLocationStr('Vinay Nagar, Faridabad');
           }
@@ -35,17 +38,33 @@ export default function TopHeader() {
     }
   }, []);
 
+  useEffect(() => {
+    fetchLocation();
+  }, [fetchLocation]);
+
+  const handleLocationClick = () => {
+    if (user) {
+      navigate('/profile/addresses');
+    } else {
+      fetchLocation();
+    }
+  };
+
   return (
     <div className="top-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{ width: 36, height: 36, background: 'linear-gradient(135deg, var(--primary), var(--primary-container))', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 800, fontSize: 18 }}>
+        <div 
+          onClick={() => navigate('/')}
+          style={{ width: 36, height: 36, background: 'linear-gradient(135deg, var(--primary), var(--primary-container))', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 800, fontSize: 18, cursor: 'pointer' }}>
           G
         </div>
         <div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-              <span style={{ fontSize: 18, fontWeight: 900, color: 'var(--primary)', letterSpacing: '-0.5px' }}>Chandra Daily Mart</span>
-              {isAdmin && <span className="admin-badge" onClick={() => navigate('/admin')} style={{ fontSize: 9 }}>ADMIN</span>}
+              <span 
+                onClick={() => navigate('/')}
+                style={{ fontSize: 18, fontWeight: 900, color: 'var(--primary)', letterSpacing: '-0.5px', cursor: 'pointer' }}>Chandra Daily Mart</span>
+              {isAdmin && <span className="admin-badge" onClick={() => navigate('/admin')} style={{ fontSize: 9, cursor: 'pointer' }}>ADMIN</span>}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <h1 style={{ fontSize: 13, fontWeight: 700, color: 'var(--on-surface)', marginTop: -2 }}>Delivery in 30 mins</h1>
@@ -62,8 +81,11 @@ export default function TopHeader() {
               )}
             </div>
           </div>
-          <p style={{ fontSize: 12, color: 'var(--outline)', display: 'flex', alignItems: 'center', gap: 4 }}>
-            {locationStr} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"/></svg>
+          <p 
+            onClick={handleLocationClick}
+            style={{ fontSize: 12, color: 'var(--outline)', display: 'flex', alignItems: 'center', gap: 4, cursor: 'pointer', userSelect: 'none' }}>
+            <span style={{ maxWidth: 180, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{locationStr}</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </p>
         </div>
       </div>
@@ -81,6 +103,5 @@ export default function TopHeader() {
         )}
       </div>
     </div>
-
   );
 }
