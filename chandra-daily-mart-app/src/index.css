@@ -216,14 +216,16 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--surface-low);
+  background: #f0fdf4; /* Soft Fresh Green Tint */
   border-radius: var(--radius-xl);
   padding: 12px 18px;
   cursor: pointer;
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1.5px solid rgba(0, 110, 36, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
   transition: all 0.2s;
 }
 .search-bar:active { transform: scale(0.98); }
+.search-bar svg { color: var(--primary); }
 .search-bar input {
   flex: 1;
   border: none;
@@ -234,7 +236,7 @@ h1, h2, h3, h4, h5 {
   outline: none;
   font-weight: 600;
 }
-.search-bar input::placeholder { color: var(--outline); font-weight: 500; }
+.search-bar input::placeholder { color: var(--primary); opacity: 0.6; font-weight: 600; }
 
 /* === Banners === */
 .hero-banner {
